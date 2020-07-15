@@ -1,0 +1,56 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+$bg-color: #271B40;
+$light-bg-color: #37275C;
+$dark-bg-color: #251333;
+
+$bg-green: #243043;
+$light-green: #84FAB1;
+$green: #0EFB69;
+
+$red: #FC4056;
+
+$blue: #0EA1FB;
+
+
+
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.51572rem;
+}
+
+h3 {
+    font-size: 1.31951rem;;
+}
+
+html {
+    background-color: $bg-color;
+}
+
+.nav-link {
+    color: $red;
+    text-decoration: underline;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        color: $green;
+        transition: all .5s ease-in-out;
+    }
+}
+
+.latest-episode {
+    background-color: $blue;
+    color: white;
+    display: flex;
+    width: 620px;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+}
