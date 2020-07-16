@@ -6,8 +6,7 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "../styles/main.scss"
@@ -26,26 +25,25 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
+        <main
+          style={{
+            margin: `0 auto`,
+            maxWidth: 960,
+            padding: `0 1.0875rem 1.45rem`,
+            minHeight: `100vh`
+          }}>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <Link className="nav-link m-4" to="/">Home</Link>
+          <Link className="nav-link m-4" to="/about">About</Link>
+          <Link className="nav-link m-4" to="/episodes">Episodes</Link>
+          <a href="https://merch.streamelements.com/theflyingdev/" className="nav-link m-4">Store</a>
+          <a href="https://discord.gg/ZUk4eRh" className="nav-link m-4">Discord</a>
+          <Link className="nav-link m-4" to="/donate">Donate</Link>
+          <Link className="nav-link m-4" to="/contacts">Contacts</Link>
         </footer>
-      </div>
     </>
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

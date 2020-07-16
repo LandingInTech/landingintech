@@ -12,11 +12,35 @@ $light-green: #84FAB1;
 $green: #0EFB69;
 
 $red: #FC4056;
+$bg-red: #3A1D41;
 
 $blue: #0EA1FB;
 
 
+html {
+    background-color: $bg-color;
+    font: 112.5%/1.61 'Montserrat',sans-serif;
+}
 
+body {
+    color: white;
+}
+
+header {
+    background-color: $dark-bg-color;
+    border-bottom: 1px solid $light-bg-color;
+    padding: 2.5rem 0rem;
+}
+
+footer {
+    background-color: $dark-bg-color;
+    border-top: 1px solid $light-bg-color;
+    padding: 1.5rem;
+}
+
+h1, h2, h3 {
+    color: $green;
+}
 
 h1 {
     font-size: 2rem;
@@ -30,10 +54,6 @@ h3 {
     font-size: 1.31951rem;;
 }
 
-html {
-    background-color: $bg-color;
-}
-
 .nav-link {
     color: $red;
     text-decoration: underline;
@@ -45,12 +65,81 @@ html {
     }
 }
 
-.latest-episode {
-    background-color: $blue;
-    color: white;
-    display: flex;
-    width: 620px;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
+.green-button {
+    background-color: $bg-green;
+    border: 1px solid $green;
+    color: $green;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        background-color: $bg-red;
+        color: $red;
+        border-color: $red;
+        transition: all .5s ease-in-out;
+    }
 }
+
+
+.card {
+    background-color: $dark-bg-color;
+
+    .card-title {
+        text-transform: capitalize;
+        text-align: center;
+        margin: 3rem 4rem;
+    }
+
+    .images-area {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2rem;
+    }
+
+    .avatar {
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    .latest-episode {
+        margin-top: 2rem;
+        background-color: $blue;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+    }
+
+    .guest-name {
+        color: $red;
+        font-size: xxx-large;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .guest-job {
+        color: white;
+        text-align: center;
+    }
+}
+
+
+
+.mdx {
+    h1, h2, h3 {
+        margin: .67em 0;
+        padding-top: .5rem;
+      &:before {
+          content: url(../images/icons/red-plane.svg);
+          margin-right: .5rem;
+      }  
+    }
+
+
+    p {
+        margin: .67em 0;
+    }
+}
+
+@import './elements.scss';
+@import './icons.scss';

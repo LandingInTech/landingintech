@@ -1,0 +1,62 @@
+input, textarea {
+    background-color: $light-bg-color;
+    border: 1px solid $light-bg-color;
+    padding: .5rem 1rem;
+
+    &:hover, &:focus, &:active {
+        border-color: $red;
+        outline: none;
+    }
+}
+
+label {
+    margin-top: 1rem;
+}
+
+.error {
+    padding: 1rem;
+    text-align: center;
+    background-color: $bg-red;
+    border: 1px solid $red;
+    color: $red;
+    margin: .2rem 0rem;
+}
+
+.email {
+    text-decoration: underline;
+    color: $red;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        color: $green;
+        transition: all .5s ease-in-out;
+    }
+}
+
+
+.copied-tooltip {
+    position: absolute;
+    top: 1rem;
+    left:0;
+    background-color: $bg-green;
+    font-size: small;
+    padding: .3rem;
+    margin: .5rem;
+    color: $green;
+    border-radius: .5rem;
+
+    animation: 1s linear forwards fadeout;
+}
+
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: .2;
+    }
+}

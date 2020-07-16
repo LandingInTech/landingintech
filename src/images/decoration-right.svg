@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="133" height="158" viewBox="0 0 133 158">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff70c5"/>
+      <stop offset="0.453" stop-color="#ff5dbd"/>
+      <stop offset="1" stop-color="#ff22a5"/>
+    </radialGradient>
+    <clipPath id="clip-Artboard_9">
+      <rect width="133" height="158"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_9" data-name="Artboard – 9" clip-path="url(#clip-Artboard_9)">
+    <rect id="Rectangle_229" data-name="Rectangle 229" width="26.603" height="26.603" transform="matrix(-0.829, -0.559, 0.559, -0.829, 116.642, 120.983)" fill="#23b9db" opacity="0.145"/>
+    <circle id="Ellipse_155" data-name="Ellipse 155" cx="10.261" cy="10.261" r="10.261" transform="translate(50.584 20.974) rotate(173)" fill="#00c95d" opacity="0.15"/>
+    <circle id="Ellipse_156" data-name="Ellipse 156" cx="10.261" cy="10.261" r="10.261" transform="translate(37.371 156.609) rotate(173)" fill="#ffcd2e" opacity="0.15"/>
+    <rect id="Rectangle_230" data-name="Rectangle 230" width="26.603" height="26.603" transform="matrix(-0.829, -0.559, 0.559, -0.829, 24.511, 87.879)" fill="#fc354c" opacity="0.145"/>
+    <circle id="Ellipse_157" data-name="Ellipse 157" cx="10.261" cy="10.261" r="10.261" transform="translate(120.188 51.482) rotate(173)" opacity="0.15" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

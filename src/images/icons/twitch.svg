@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-twitch">
+      <rect width="50" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="twitch" clip-path="url(#clip-twitch)">
+    <path id="twitch-brands" d="M60.136,10.1H56.364V20.817h3.772Zm-10.368-.046H46V20.776h3.772ZM33.736,0,24.31,8.928V41.072H35.622V50l9.427-8.928h7.544L69.562,25V0ZM65.79,23.218l-7.541,7.141H50.706l-6.6,6.25v-6.25H35.622V3.572H65.79Z" transform="translate(-22.31)" fill="#a77cff"/>
+  </g>
+</svg>

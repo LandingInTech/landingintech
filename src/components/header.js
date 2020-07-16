@@ -4,7 +4,7 @@ import React from "react"
 import Logo from "../images/logo.svg"
 
 const Header = () => (
-  <header className="flex justify-center items-center my-8 text-lg">
+  <header className="flex justify-center items-center text-lg">
     <div>
         <Link className="nav-link m-4" to="/">Home</Link>
         <Link className="nav-link m-4" to="/about">About</Link>
