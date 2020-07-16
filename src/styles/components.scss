@@ -1,0 +1,22 @@
+.episode-card {
+    background-color: $light-bg-color;
+    display: flex;
+    
+    .card-image {
+        width: 150px;
+    }
+
+    .episode-text {
+        padding: 1rem 1rem 0rem;
+        font-size: x-large;
+    }
+
+    .episode-title {
+        color: $light-green;
+        margin-bottom: .5rem;
+    }
+
+    .episode-guest {
+        color: $light-red;
+    }
+}

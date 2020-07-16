@@ -12,6 +12,7 @@ $light-green: #84FAB1;
 $green: #0EFB69;
 
 $red: #FC4056;
+$light-red: #FAA0AB;
 $bg-red: #3A1D41;
 
 $blue: #0EA1FB;
@@ -141,5 +142,13 @@ h3 {
     }
 }
 
+.plane {
+    &:before {
+        content: url(../images/icons/red-plane.svg);
+        margin-right: .5rem;
+    }  
+}
+
 @import './elements.scss';
 @import './icons.scss';
+@import './components.scss';

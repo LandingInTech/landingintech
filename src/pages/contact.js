@@ -35,7 +35,7 @@ const Contact = () => {
             <SEO title="Contact" />
             <section className="py-12 flex">
                 <div className="w-1/2 mr-12">
-                    <h1 className="mb-5 mt-12">Contact us</h1>
+                    <h1 className="mb-5 mt-12 plane">Contact us</h1>
                     <p>You can contact us by getting in touch through social media, filling out the form or by sending us an email at <span role="button"  tabIndex={0} className="email" onClick={() => copyToClipboard()} onKeyDown={() => copyToClipboard()}>hello@landingintech.com {copied ? <span className="copied-tooltip">Copied to the clipboard!</span> : ''} </span></p>
 
                     <div className="flex mt-5">
