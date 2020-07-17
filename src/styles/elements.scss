@@ -60,3 +60,31 @@ label {
         opacity: .2;
     }
 }
+
+
+.mdx {
+    h1, h2, h3 {
+        margin: .67em 0;
+        padding-top: .5rem;
+      &:before {
+          content: url(../images/icons/red-plane.svg);
+          margin-right: .5rem;
+      }  
+    }
+
+
+    p {
+        margin: .67em 0;
+    }
+
+    a {
+        color: $red;
+        text-decoration: underline;
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            color: $green;
+            transition: all .5s ease-in-out;
+        }
+    }
+}

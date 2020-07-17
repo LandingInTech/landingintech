@@ -14,6 +14,7 @@ export default ({ children }) => {
                 guest
                 job
                 title
+                episode
                 ogImage {
                     childImageSharp {
                         original {
@@ -25,12 +26,14 @@ export default ({ children }) => {
             }
         }
     `)
-
+    
     const { frontmatter } = data.mdx
     const ogImageSrc = frontmatter.ogImage.childImageSharp.original.src
+    const pageTitle = children[0]?.props.children || frontmatter.episode
+
     return(
     <Layout>
-        <SEO title={frontmatter.title} og={ogImageSrc} />
+        <SEO title={pageTitle } og={ogImageSrc} />
         <section className="my-16 mdx">
             {children}
         </section>

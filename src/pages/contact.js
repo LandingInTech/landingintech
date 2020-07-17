@@ -3,11 +3,7 @@ import { useForm } from "react-hook-form"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-import Instagram from "../images/icons/instagram.svg"
-import Twitch from "../images/icons/twitch.svg"
-import Twitter from "../images/icons/twitter.svg"
-import Youtube from "../images/icons/youtube.svg"
+import Social from "../components/social"
 
 const Contact = () => {
     const [sent, setSent] = useState(false)
@@ -38,12 +34,7 @@ const Contact = () => {
                     <h1 className="mb-5 mt-12 plane">Contact us</h1>
                     <p>You can contact us by getting in touch through social media, filling out the form or by sending us an email at <span role="button"  tabIndex={0} className="email" onClick={() => copyToClipboard()} onKeyDown={() => copyToClipboard()}>hello@landingintech.com {copied ? <span className="copied-tooltip">Copied to the clipboard!</span> : ''} </span></p>
 
-                    <div className="flex mt-5">
-                        <a href="https://twitter.com/landingintech" className="mr-5"> <img src={Twitter} alt="Twitter" /></a>
-                        <a href="https://twitch.tv/theflyingdev" className="mr-5"><img src={Twitch} alt="Twitch" /></a>
-                        <a href="https://www.youtube.com/channel/UCUCYKCdnRhipFV3Tk852CcA" className="mr-5"><img src={Youtube} alt="Youtube" /></a>
-                        <a href="https://www.instagram.com/landingintech/" className="mr-5"><img src={Instagram} alt="Instagram" /></a>
-                    </div>
+                    <Social />
                 
                 </div>
                 <div className="flex-grow">
