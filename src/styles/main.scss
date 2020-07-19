@@ -17,6 +17,14 @@ $bg-red: #3A1D41;
 
 $blue: #0EA1FB;
 
+$desktop-size: 600px;
+
+@mixin desktop {
+    @media(min-width: #{$desktop-size}) {
+      @content
+    }
+  };
+
 
 html {
     background-color: $bg-color;
@@ -37,6 +45,11 @@ footer {
     background-color: $dark-bg-color;
     border-top: 1px solid $light-bg-color;
     padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include desktop {
+        display: flex;
+    }
 }
 
 h1, h2, h3 {
@@ -44,7 +57,9 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    @include desktop {font-size: 2rem;}
+    
 }
 
 h2 {
@@ -58,6 +73,7 @@ h3 {
 .sound-cloud {
     position: fixed;
     top: 0;
+    z-index: 1;
     width: 100vw;
     background-color: $light-bg-color;
     margin-top: 0;
@@ -96,13 +112,25 @@ h3 {
     .card-title {
         text-transform: capitalize;
         text-align: center;
-        margin: 3rem 4rem;
+        margin: 2rem;
+        @include desktop {
+            margin: 3rem 4rem;
+        }
+        
     }
 
     .images-area {
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 2rem;
+
+        .decoration {
+            display: none;
+
+            @include desktop {
+                display: block;
+            }
+        }
     }
 
     .avatar {
@@ -122,9 +150,12 @@ h3 {
 
     .guest-name {
         color: $red;
-        font-size: xxx-large;
+        font-size: xx-large;
         text-align: center;
         font-weight: 500;
+        @include desktop {
+            font-size: xxx-large;
+        }
     }
 
     .guest-job {

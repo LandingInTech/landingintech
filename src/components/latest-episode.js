@@ -18,11 +18,11 @@ const LatestEpisode = (data) => {
                 <h1 className="card-title">{details.title}</h1>
             </Link>
             <div className="images-area">
-                    <img src={left} alt="" />
+                    <img src={left} alt="" className="decoration" />
                     <Link to={slug}>
                         <Img className="avatar" alt={details.title} fluid={details.avatar.childImageSharp.fluid} />
                     </Link>
-                    <img src={right} alt="" />
+                    <img src={right} className="decoration" alt="" />
             </div>
             <Link to={slug}>
                 <p className="guest-name">{details.guest}</p>

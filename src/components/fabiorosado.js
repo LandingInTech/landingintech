@@ -22,7 +22,7 @@ const FabioCard = () => {
     return (
         <div className="episode-card">
             <Img fixed={data.avatar.childImageSharp.fixed} alt="FabioRosado" />
-            <div className="ml-8 pt-5">
+            <div className="mx-8 pt-5">
                 <p className="episode-title text-xl">FabioRosado</p>
                 <p className=''>Self-taught developer by night and Flight Attendant by day.</p>
                 <p>

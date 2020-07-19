@@ -29,8 +29,8 @@ const Contact = () => {
     return (
         <Layout>
             <SEO title="Contact" />
-            <section className="py-12 flex">
-                <div className="w-1/2 mr-12">
+            <section className="py-12 flex flex-col md:flex-row">
+                <div className="md:w-1/2 mr-12">
                     <h1 className="mb-5 mt-12 plane">Contact us</h1>
                     <p>You can contact us by getting in touch through social media, filling out the form or by sending us an email at <span role="button"  tabIndex={0} className="email" onClick={() => copyToClipboard()} onKeyDown={() => copyToClipboard()}>hello@landingintech.com {copied ? <span className="copied-tooltip">Copied to the clipboard!</span> : ''} </span></p>
 
@@ -50,7 +50,7 @@ const Contact = () => {
 
                         <label htmlFor="message">Message</label>
                         <textarea name="message" ref={register({ required: true})} placeholder="Your message..." />
-                        <button className="green-button my-5 mx-24 p-2 flex justify-center items-center" type="submit">{sent ? <><i className="gg-check mr-2" /> Sent Successfully</> : <><i className="gg-mail mr-2" /> Send Message</>}  </button>
+                        <button className="green-button my-5 md:mx-24 p-2 flex justify-center items-center" type="submit">{sent ? <><i className="gg-check mr-2" /> Sent Successfully</> : <><i className="gg-mail mr-2" /> Send Message</>}  </button>
                         <div className="flex flex-col justify-center">
                             {errors.name && <span className="error">Name field is required.</span>}
                             {errors.email &&   <span className="error">Please enter a valid email.</span>} 

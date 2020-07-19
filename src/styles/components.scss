@@ -1,14 +1,24 @@
 .episode-card {
     background-color: $light-bg-color;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    @include desktop {
+        flex-direction: row;
+        padding-top: 0rem;
+    }
     
     .card-image {
         width: 150px;
     }
 
     .episode-text {
-        padding: 1rem 1rem 0rem;
-        font-size: x-large;
+        padding: 1rem;
+        font-size: large;
+        @include desktop {
+            font-size: x-large;
+        }
     }
 
     .episode-title {
@@ -18,5 +28,10 @@
 
     .episode-guest {
         color: $light-red;
+        text-align: center;
+
+        @include desktop {
+            text-align: left;
+        }
     }
 }
