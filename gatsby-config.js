@@ -60,58 +60,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`
       }
     },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-            {
-              serialize: ({ query: { site, allMarkdownRemark }}) => {
-                return allMarkdownRemark.edges.map(edge => {
-                  return Object.assign({}, edge.node.frontmatter, {
-                    description: edge.node.frontmatter.excerpt,
-                    date: edge.node.frontmatter.date,
-                    url: `${site.siteMetadata.siteUrl}/${edge.node.frontmatter.slug}`,
-                    guid: `${site.siteMetadata.siteUrl}/${edge.node.frontmatter.slug}`,
-                    custom_elements: [{"content:encoded": edge.node.html}]
-                  })
-                })
-              },
-              query: `
-              {
-                allMarkdownRemark(
-                  filter: {frontmatter: {categories: {ne: "Projects"}}}, 
-                  sort: {fields: [frontmatter___date], order: DESC}
-                ) {
-                  edges {
-                    node {
-                      frontmatter {
-                        excerpt
-                        slug
-                        title
-                        date
-                      }
-                    }
-                  }
-                }
-              }`,
-              output: "/rss.xml",
-              title: "Landing in Tech RSS Feed",
-          }
-        ]
-      }
-    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
