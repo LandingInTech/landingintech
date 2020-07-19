@@ -14,7 +14,7 @@ const IndexPage = (props) =>  {
       <SEO title="Home | Landing In Tech" />
       <section className="flex justify-center items-center flex-col py-12">
       <LatestEpisode details={episode}/>
-        
+      
       </section>
       
     </Layout>

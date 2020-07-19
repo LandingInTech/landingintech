@@ -30,7 +30,7 @@ body {
 header {
     background-color: $dark-bg-color;
     border-bottom: 1px solid $light-bg-color;
-    padding: 2.5rem 0rem;
+    padding: 3rem 0rem 2rem;
 }
 
 footer {
@@ -53,6 +53,15 @@ h2 {
 
 h3 {
     font-size: 1.31951rem;;
+}
+
+.sound-cloud {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: $light-bg-color;
+    margin-top: 0;
+    padding: .5rem 1rem;
 }
 
 .nav-link {

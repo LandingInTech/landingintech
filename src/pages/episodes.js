@@ -12,7 +12,7 @@ export default (props) => {
     <Layout>
         <SEO title="Episodes" />
         <h1 className="my-12 plane">Episodes</h1>
-        {props.data.episodes.edges.map(episode => <EpisodeCard details={episode} key={episode.node.title}/>)}
+        {props.data.episodes.edges.map(episode => <EpisodeCard details={episode} key={episode.node.frontmatter.title}/>)}
     </Layout>
 )}
 

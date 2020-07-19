@@ -63,6 +63,7 @@ label {
 
 
 .mdx {
+    padding: 0rem 3rem;
     h1, h2, h3 {
         margin: .67em 0;
         padding-top: .5rem;
@@ -75,6 +76,9 @@ label {
 
     p {
         margin: .67em 0;
+        line-height: 1.6;
+        text-rendering: optimizelegibility;
+        letter-spacing: .03em;
     }
 
     a {
@@ -87,4 +91,39 @@ label {
             transition: all .5s ease-in-out;
         }
     }
+
+    ul {
+        list-style-type: circle;
+        list-style-position: inside;
+        padding-left: 1rem;
+    }
+
+    .transcript-fabio {
+        color: $red;
+    }
+    .transcript-guest {
+        color: $green;
+    }
+
+    .link-button {
+        text-decoration: none;
+        background-color: $bg-green;
+        border: 1px solid $green;
+        color: $green;
+        transition: all .5s ease-in-out;
+        padding: .3rem;
+    
+        &:hover {
+            background-color: $bg-red;
+            color: $red;
+            border-color: $red;
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.soundcloud-iframe {
+    padding: 1rem;
+    background-color: $light-bg-color;
+    margin-bottom: 1rem;
 }
