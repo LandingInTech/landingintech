@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-headphones">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="headphones" clip-path="url(#clip-headphones)">
+    <path id="headphones-solid" d="M10,32A9.995,9.995,0,0,0,0,42v1.875a1.25,1.25,0,0,0,.691,1.118l.562.281A4.375,4.375,0,0,0,5.625,49.5h.938a.937.937,0,0,0,.938-.937V41.688a.937.937,0,0,0-.937-.937H5.625A4.362,4.362,0,0,0,2.5,42.064V42a7.5,7.5,0,0,1,15,0v.064a4.362,4.362,0,0,0-3.125-1.314h-.937a.937.937,0,0,0-.937.938v6.875a.937.937,0,0,0,.938.938h.938a4.375,4.375,0,0,0,4.372-4.226l.562-.281A1.25,1.25,0,0,0,20,43.875V42A9.995,9.995,0,0,0,10,32Z" transform="translate(2 -29)" fill="#0efb69"/>
+  </g>
+</svg>

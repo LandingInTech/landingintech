@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Landing in Tech`,
-    description: `Talking with developers about their journey into tech.`,
+    description: `Each developer has a unique journey that they undertook to get into tech and achieve their position we talk with them about that journey.`,
     author: `FabioRosado`,
     siteUrl: `https://landingintech.com`
   },
@@ -62,6 +62,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

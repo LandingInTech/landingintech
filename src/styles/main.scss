@@ -96,6 +96,7 @@ h3 {
     border: 1px solid $green;
     color: $green;
     transition: all .5s ease-in-out;
+    text-decoration: none;
 
     &:hover {
         background-color: $bg-red;
