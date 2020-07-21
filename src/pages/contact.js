@@ -50,7 +50,7 @@ const Contact = () => {
 
                         <label htmlFor="message">Message</label>
                         <textarea name="message" ref={register({ required: true})} placeholder="Your message..." />
-                        <button className="green-button my-5 md:mx-24 p-2 flex justify-center items-center" type="submit">{sent ? <><i className="gg-check mr-2" /> Sent Successfully</> : <><i className="gg-mail mr-2" /> Send Message</>}  </button>
+                        <button className="green-button my-5 p-2 flex justify-center items-center" type="submit">{sent ? <><i className="gg-check mr-2" /> Sent Successfully</> : <><i className="gg-mail mr-2" /> Send Message</>}  </button>
                         <div className="flex flex-col justify-center">
                             {errors.name && <span className="error">Name field is required.</span>}
                             {errors.email &&   <span className="error">Please enter a valid email.</span>} 
