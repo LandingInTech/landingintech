@@ -24,6 +24,7 @@ export const pageQuery = graphql`
           frontmatter {
             job
             title
+            episode
             guest
             date
             avatar {

@@ -14,6 +14,7 @@ const EpisodeCard = (data) => {
                 </Link>
             </div>
             <div className="episode-text">
+                <p className="episode-number">{details.episode}</p>
                 <Link to={slug}>
                     <p className="episode-title">{details.title}</p>
                     <p className="episode-guest">{details.guest}</p>

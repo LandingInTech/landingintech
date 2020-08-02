@@ -166,12 +166,26 @@ h3 {
 }
 
 
-
 .plane {
     &:before {
         content: url(../images/icons/red-plane.svg);
         margin-right: .5rem;
     }  
+}
+
+.green-plane {
+    &:before {
+        content: url(../images/icons/plane.svg);
+        margin-right: .5rem;
+    }  
+}
+
+.red {
+    color: $red;
+}
+
+.medium-text {
+    font-size: medium;
 }
 
 @import './elements.scss';

@@ -1,10 +1,10 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import LatestEpisode from "../components/latest-episode"
-import { graphql } from "gatsby"
-
+import PastEpisodes from "../components/episodes-list"
 import RSS from "../images/icons/rss.svg"
 import SPOTIFY from "../images/icons/spotify.svg"
 import HEADPHONES from "../images/icons/headphones.svg"
@@ -26,6 +26,8 @@ const IndexPage = (props) =>  {
         <a href="https://www.breaker.audio/landing-in-tech" className="p-2 green-button flex items-center justify-center"><img src={HEADPHONES} className="mb-0 mr-2" alt="RSS Feed" /> BREAKER</a>
       </div>
       </section>
+
+      <PastEpisodes />
       
     </Layout>
   )
