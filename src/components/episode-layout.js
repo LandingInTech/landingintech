@@ -8,7 +8,7 @@ export default ( props ) => {
     
     const { frontmatter } = props.pageContext
 
-    const ogImageSrc =  `https://landingintech.com/static/${frontmatter.ogImage}`
+    const ogImageSrc =  `https://landingintech.com/${frontmatter.ogImage}`
     const pageTitle = frontmatter.title
 
     return(
