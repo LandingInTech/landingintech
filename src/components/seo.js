@@ -36,7 +36,7 @@ function SEO({ description, lang, meta, title, og }) {
   const site = data.site
 
   const metaDescription = description || site.siteMetadata.description
-  const ogImage = og
+  const ogImage = og || data.og.childImageSharp.original.src
 
   return (
     <Helmet
