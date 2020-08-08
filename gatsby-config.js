@@ -67,6 +67,18 @@ module.exports = {
       }
 
     },
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        exclude: [              
+          `/dev-404-page`,
+          `/404`,
+          `/404.html`,
+          '/offline-plugin-app-shell-fallback'
+        ],
+        addUncaughtPages: true,
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
