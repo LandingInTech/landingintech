@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
           <Link className="nav-link md:m-4" to="/">Home</Link>
           <Link className="nav-link md:m-4" to="/about">About</Link>
           <Link className="nav-link md:m-4" to="/episodes">Episodes</Link>
-          <a href="https://merch.streamelements.com/theflyingdev/" className="nav-link md:m-4">Store</a>
+          <a href="https://teespring.com/stores/landing-in-tech" className="nav-link md:m-4">Store</a>
           <a href="https://discord.gg/ZUk4eRh" className="nav-link md:m-4">Discord</a>
           <a className="nav-link md:m-4" href="https://www.buymeacoffee.com/FabioRosado">Donate</a>
           <Link className="nav-link md:m-4" to="/contacts">Contacts</Link>

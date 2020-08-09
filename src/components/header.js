@@ -21,7 +21,7 @@ const Header = () => (
     
     <div>
       <Link className="nav-link m-4" to="/episodes">Episodes</Link>
-      <a href="https://merch.streamelements.com/theflyingdev/" className="nav-link m-4">Store</a>
+      <a href="https://teespring.com/stores/landing-in-tech" className="nav-link m-4">Store</a>
       <a href="https://discord.gg/ZUk4eRh" className="nav-link m-4">Discord</a>
     </div>
 
