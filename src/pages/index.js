@@ -9,6 +9,7 @@ import RSS from "../images/icons/rss.svg"
 import SPOTIFY from "../images/icons/spotify.svg"
 import HEADPHONES from "../images/icons/headphones.svg"
 import APPLE from "../images/icons/apple.svg"
+import GOOGLE from "../images/icons/google.svg"
 
 const IndexPage = (props) =>  {
 
@@ -21,9 +22,10 @@ const IndexPage = (props) =>  {
       <LatestEpisode details={episode}/>
       <div className="flex flex-col md:flex-row">
         <a href="https://feeds.soundcloud.com/users/soundcloud:users:849950239/sounds.rss" className="p-2 green-button flex items-center justify-center md:mr-5"><img src={RSS} className="mb-0 mr-2" alt="RSS Feed" /> RSS</a>
-        <a href="https://podcasts.apple.com/gb/podcast/landing-in-tech/id1524211616" className="p-2 green-button flex items-center justify-center md:mr-5"><img src={APPLE} className="mb-0 mr-2" alt="RSS Feed" /> APPLE PODCAST</a>
-        <a href="https://open.spotify.com/show/6wKJSgr5FSOUMWbuQcVbxh" className="p-2 green-button flex items-center justify-center md:mr-5"><img src={SPOTIFY} className="mb-0 mr-2" alt="RSS Feed" /> SPOTIFY</a>
-        <a href="https://www.breaker.audio/landing-in-tech" className="p-2 green-button flex items-center justify-center"><img src={HEADPHONES} className="mb-0 mr-2" alt="RSS Feed" /> BREAKER</a>
+        <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjg0OTk1MDIzOS9zb3VuZHMucnNz?sa=X&ved=0CAYQrrcFahcKEwigqoHx69vrAhUAAAAAHQAAAAAQAQ" className="p-2 green-button flex items-center justify-center md:mr-5"><img src={GOOGLE} className="mb-0 mr-2" alt="Google feed" />G Podcasts</a>
+        <a href="https://podcasts.apple.com/gb/podcast/landing-in-tech/id1524211616" className="p-2 green-button flex items-center justify-center md:mr-5"><img src={APPLE} className="mb-0 mr-2" alt="Apple Feed" /> APPLE PODCAST</a>
+        <a href="https://open.spotify.com/show/6wKJSgr5FSOUMWbuQcVbxh" className="p-2 green-button flex items-center justify-center md:mr-5"><img src={SPOTIFY} className="mb-0 mr-2" alt="Spotify Feed" /> SPOTIFY</a>
+        <a href="https://www.breaker.audio/landing-in-tech" className="p-2 green-button flex items-center justify-center"><img src={HEADPHONES} className="mb-0 mr-2" alt="Breaker Feed" /> BREAKER</a>
       </div>
       </section>
 

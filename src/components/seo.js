@@ -22,13 +22,6 @@ function SEO({ description, lang, meta, title, og }) {
             siteUrl
           }
         }
-        og:file(relativePath: {eq: "default-og.png"}) {
-        childImageSharp {
-          original {
-            src
-          }
-        }
-      }
       }
     `
   )
@@ -36,8 +29,9 @@ function SEO({ description, lang, meta, title, og }) {
   const site = data.site
 
   const metaDescription = description || site.siteMetadata.description
-  const ogImage = `https://landingintech.com/${og}` || data.og.childImageSharp.original.src
+  const ogImage = og || `https://landingintech.com/og-images/default-og.png`
 
+  console.log(ogImage)
   return (
     <Helmet
       htmlAttributes={{
@@ -80,7 +74,7 @@ function SEO({ description, lang, meta, title, og }) {
         },
         {
           name: `twitter:image`,
-          content: `${site.siteMetadata.siteUrl}${ogImage}`
+          content: `${ogImage}`
         },
         {
           name: `twitter:image:alt`,
