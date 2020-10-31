@@ -25,25 +25,47 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-        <main
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
-            minHeight: `100vh`
-          }}>{children}</main>
-        <footer>
-          <Link className="nav-link md:m-4" to="/">Home</Link>
-          <Link className="nav-link md:m-4" to="/about">About</Link>
-          <Link className="nav-link md:m-4" to="/episodes">Episodes</Link>
-          <a href="https://teespring.com/stores/landing-in-tech" className="nav-link md:m-4">Store</a>
-          <a href="https://discord.gg/ZUk4eRh" className="nav-link md:m-4">Discord</a>
-          <a className="nav-link md:m-4" href="https://www.buymeacoffee.com/FabioRosado">Donate</a>
-          <Link className="nav-link md:m-4" to="/contacts">Contacts</Link>
-        </footer>
+      <main
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0 1.0875rem 1.45rem`,
+          minHeight: `100vh`,
+        }}
+      >
+        {children}
+      </main>
+      <footer>
+        <Link className="nav-link md:m-4" to="/">
+          Home
+        </Link>
+        <Link className="nav-link md:m-4" to="/about">
+          About
+        </Link>
+        <Link className="nav-link md:m-4" to="/episodes">
+          Episodes
+        </Link>
+        <a
+          href="https://teespring.com/stores/landing-in-tech"
+          className="nav-link md:m-4"
+        >
+          Store
+        </a>
+        <a href="https://discord.gg/ZUk4eRh" className="nav-link md:m-4">
+          Discord
+        </a>
+        <a
+          className="nav-link md:m-4"
+          href="https://www.buymeacoffee.com/FabioRosado"
+        >
+          Donate
+        </a>
+        <Link className="nav-link md:m-4" to="/contacts">
+          Contacts
+        </Link>
+      </footer>
     </>
   )
 }
-
 
 export default Layout

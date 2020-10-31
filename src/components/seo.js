@@ -31,7 +31,6 @@ function SEO({ description, lang, meta, title, og }) {
   const metaDescription = description || site.siteMetadata.description
   const ogImage = og || `https://landingintech.com/og-images/default-og.png`
 
-  console.log(ogImage)
   return (
     <Helmet
       htmlAttributes={{
@@ -74,11 +73,11 @@ function SEO({ description, lang, meta, title, og }) {
         },
         {
           name: `twitter:image`,
-          content: `${ogImage}`
+          content: `${ogImage}`,
         },
         {
           name: `twitter:image:alt`,
-          content: metaDescription
+          content: metaDescription,
         },
       ].concat(meta)}
     />

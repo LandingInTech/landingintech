@@ -3,15 +3,15 @@ module.exports = {
     title: `Landing in Tech`,
     description: `Each developer has a unique journey that they undertook to get into tech and achieve their position we talk with them about that journey.`,
     author: `FabioRosado`,
-    siteUrl: `https://landingintech.com`
+    siteUrl: `https://landingintech.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
-        siteUrl: `https://landingintech.com`
-      }
+        siteUrl: `https://landingintech.com`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -32,9 +32,9 @@ module.exports = {
       extensions: [".mdx", ".md"],
       options: {
         defaultLayouts: {
-          default: require.resolve("./src/components/episode-layout.js")
-        }
-      }
+          default: require.resolve("./src/components/episode-layout.js"),
+        },
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -54,36 +54,32 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        postCssPlugins: [
-          require("tailwindcss"),
-          require("./tailwind.config")
-        ]
-      }
+        postCssPlugins: [require("tailwindcss"), require("./tailwind.config")],
+      },
     },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`
-      }
+        pathToConfigModule: `src/utils/typography`,
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-173184715-1"
-      }
-
+        trackingId: "UA-173184715-1",
+      },
     },
     {
       resolve: `gatsby-plugin-advanced-sitemap`,
       options: {
-        exclude: [              
+        exclude: [
           `/dev-404-page`,
           `/404`,
           `/404.html`,
-          '/offline-plugin-app-shell-fallback'
+          "/offline-plugin-app-shell-fallback",
         ],
         addUncaughtPages: true,
-      }
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
