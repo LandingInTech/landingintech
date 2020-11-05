@@ -14,12 +14,13 @@ export default props => {
     <Layout>
       <SEO title={pageTitle} og={ogImageSrc} />
       <section className="my-16 mdx">{props.children}</section>
+      {frontmatter.category ?
       <SimilarEpisodesList
         currentEpisodePath={props.path}
         tags={frontmatter.tags}
         job={frontmatter.job}
         title={frontmatter.title}
-      />
+      /> : "" }
     </Layout>
   )
 }

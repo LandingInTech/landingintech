@@ -5,19 +5,6 @@ import Logo from "../images/logo.svg"
 
 const Header = () => (
   <header className="flex justify-center flex-col md:flex-row items-center text-lg">
-    <div className="sound-cloud">
-      <iframe
-        className="mb-0"
-        width="100%"
-        height="20"
-        scrolling="no"
-        frameBorder="no"
-        allow="autoplay"
-        title="latest episode"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/917548373&color=%23fc4056&inverse=true&auto_play=false&show_user=true"
-      />
-    </div>
-
     <div>
       <Link className="nav-link m-4" to="/">
         Home
@@ -25,6 +12,7 @@ const Header = () => (
       <Link className="nav-link m-4" to="/about">
         About
       </Link>
+      <Link className="nav-link m-4" to="/articles">Articles</Link>
       <Link className="nav-link m-4" to="/contact">
         Contact
       </Link>
@@ -47,6 +35,7 @@ const Header = () => (
       <a href="https://discord.gg/ZUk4eRh" className="nav-link m-4">
         Discord
       </a>
+      <Link className="nav-link m-4" to="/newsletter">Newsletter</Link>
     </div>
   </header>
 )
