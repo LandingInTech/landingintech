@@ -8,13 +8,13 @@ export default props => {
   const { frontmatter } = props.pageContext
 
   const ogImageSrc = `https://landingintech.com/${frontmatter.ogImage}`
-  const pageTitle = frontmatter.title
-
+  const pageTitle = frontmatter.title || props.uri.replace("/", "").replace(/^\w/, c => c.toUpperCase())
+  console.log(props)
   return (
     <Layout>
       <SEO title={pageTitle} og={ogImageSrc} />
       <section className="my-16 mdx">{props.children}</section>
-      {frontmatter.category ?
+      {props.uri.match(/episodes/) ?
       <SimilarEpisodesList
         currentEpisodePath={props.path}
         tags={frontmatter.tags}
