@@ -9,7 +9,6 @@ export default props => {
 
   const ogImageSrc = `https://landingintech.com/${frontmatter.ogImage}`
   const pageTitle = frontmatter.title || props.uri.replace("/", "").replace(/^\w/, c => c.toUpperCase())
-  console.log(props)
   return (
     <Layout>
       <SEO title={pageTitle} og={ogImageSrc} />

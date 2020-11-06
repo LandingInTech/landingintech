@@ -49,3 +49,44 @@
     font-size: x-large;
     color: #b08eff;
 }
+
+
+.article-card {
+    background-color: $light-bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+
+    .article-title {
+        color: $light-green;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .article-tag {
+        border: 1px solid $green;
+        background-color: $bg-green;
+        color: $green;
+        margin-right: .5rem;
+        padding: .2rem;
+    }
+
+    .article-category {
+        border: 1px solid $red;
+        background-color: $bg-red;
+        color: $red;
+        padding: .2rem;
+    }
+    .article-read-more {
+        color: $red;
+        text-decoration: underline;
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            color: $green;
+            transition: all .5s ease-in-out;
+        }
+    }
+}

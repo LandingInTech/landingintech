@@ -7,6 +7,7 @@ const PastEpisodes = () => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(
+        filter: {fields: {slug: {regex: "/episodes/"}}}
         skip: 1
         limit: 6
         sort: { fields: [frontmatter___date], order: DESC }

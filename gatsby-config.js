@@ -28,6 +28,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `articles`,
+        path: `${__dirname}/src/pages/articles`
+      }
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       extensions: [".mdx", ".md"],
       options: {

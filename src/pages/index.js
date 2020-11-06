@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import LatestEpisode from "../components/latest-episode"
 import PastEpisodes from "../components/episodes-list"
+import ArticleCard from "../components/article-card"
+
 import RSS from "../images/icons/rss.svg"
 import SPOTIFY from "../images/icons/spotify.svg"
 import HEADPHONES from "../images/icons/headphones.svg"
@@ -13,6 +15,8 @@ import GOOGLE from "../images/icons/google.svg"
 
 const IndexPage = props => {
   const episode = props.data.episode.edges[0].node
+  const articles = props.data.articles.nodes
+  console.log(props.data)
 
   return (
     <Layout>
@@ -58,6 +62,16 @@ const IndexPage = props => {
       </section>
 
       <PastEpisodes />
+
+      <section className="my-12">
+        <h2 className="mb-0 green-plane underline red">Latest Articles</h2>
+        <div className={articles.length > 3 ? "grid grid-cols-1 md:grid-cols-3 gap-4" : "grid grid-cols-1"}>
+          {articles.map(article => (
+            <ArticleCard details={article} key={article.frontmatter.title} />
+          ))}
+        </div>
+
+      </section>
     </Layout>
   )
 }
@@ -69,6 +83,7 @@ export const pageQuery = graphql`
     episode: allMdx(
       limit: 1
       sort: { fields: [frontmatter___date], order: DESC }
+      filter: {fields: {slug: {regex: "/episodes/"}}}
     ) {
       edges {
         node {
@@ -92,5 +107,24 @@ export const pageQuery = graphql`
         }
       }
     }
+    articles: allMdx(
+      limit: 3
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {fields: {slug: {regex: "/articles/"}}}
+      ) {
+        nodes {
+          frontmatter {
+            date(formatString: "dddd Mo, MMM YYYY")
+            title
+            excerpt
+            image
+            tags
+            category
+          }
+          fields {
+            slug
+          }
+        }
+      }
   }
 `

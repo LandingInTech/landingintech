@@ -10,11 +10,19 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode, basePath: "episode/" })
-
-    createNodeField({
-      name: `slug`,
-      node,
-      value: `/episodes${value}`,
+    if (node.frontmatter.excerpt) {
+      createNodeField({
+        name: `slug`,
+        node,
+        value: `/articles${value}`,
     })
+    } else {
+      createNodeField({
+        name: `slug`,
+        node,
+        value: `/episodes${value}`,
+    })
+    }
+
   }
 }
