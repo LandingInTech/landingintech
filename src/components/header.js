@@ -33,7 +33,7 @@ const Header = () => (
         Store
       </a>
       <a href="https://discord.gg/ZUk4eRh" className="nav-link m-4">
-        Discord
+        Community
       </a>
       <Link className="nav-link m-4" to="/newsletter">Newsletter</Link>
     </div>

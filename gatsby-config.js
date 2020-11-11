@@ -39,7 +39,8 @@ module.exports = {
       extensions: [".mdx", ".md"],
       options: {
         defaultLayouts: {
-          default: require.resolve("./src/components/episode-layout.js"),
+          default: require.resolve("./src/templates/episode-layout.js"),
+          articles: require.resolve("./src/templates/articles-layout.js")
         },
       },
     },
@@ -88,6 +89,7 @@ module.exports = {
         addUncaughtPages: true,
       },
     },
+    `gatsby-plugin-mdx-embed`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,

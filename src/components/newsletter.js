@@ -25,7 +25,7 @@ const Newsletter = () => {
     }
 
     return (
-          <form className="flex self-center flex-col w-1/2" onSubmit={handleSubmit(onSubmit)}>
+          <form className="flex self-center flex-col" onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="name">Name</label>
             <input
               name="name"

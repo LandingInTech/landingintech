@@ -1,8 +1,8 @@
 import React from "react"
 
-import Layout from "./layout"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
-import SimilarEpisodesList from "./similarEpisodes/SimilarEpisodesList"
+import SimilarEpisodesList from "../components/similarEpisodes/SimilarEpisodesList"
 
 export default props => {
   const { frontmatter } = props.pageContext

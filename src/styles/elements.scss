@@ -125,10 +125,39 @@ label {
             transition: all .5s ease-in-out;
         }
     }
+
+    .youtube-mdx-embed {
+        margin: 2rem 0rem;
+    }
+
+    .twitter-tweet {
+        padding-top: 1rem;
+    }
+
+    blockquote {
+        background: $light-bg-color;
+        border-left: 5px solid $red;
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+        font-style: italic;
+
+        p {
+            display: inline;
+        }
+
+        a {
+            margin-top: .5rem;
+        }
+    }
 }
 
 .soundcloud-iframe {
     padding: 1rem;
     background-color: $light-bg-color;
     margin-bottom: 1rem;
+}
+
+.newsletter-cta {
+    border: 1px solid $red;
+    background-color: $dark-bg-color;
 }
