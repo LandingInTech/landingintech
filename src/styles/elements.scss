@@ -161,3 +161,29 @@ label {
     border: 1px solid $red;
     background-color: $dark-bg-color;
 }
+
+.table-of-contents {
+    position: fixed;
+    z-index: 10;
+    width: 20%;
+    right: 1.5rem;
+    background-color: #37275c;
+    border: 1px solid #fc4056;
+    padding: 1rem;
+}
+
+.hide-out {
+    animation: slide-out 5s forwards;
+}
+
+@keyframes slide-out {
+    0% {
+        right: 1.5rem;
+    }
+    50% {
+        right: -10rem;
+    }
+    100% {
+        right: -400rem;
+    }
+}

@@ -12,7 +12,7 @@ export default props => {
   return (
     <Layout>
       <SEO title={pageTitle} og={ogImageSrc} />
-      <section className="my-16 mdx">{props.children}</section>
+      <section className="my-16 md:mx-12 mdx">{props.children}</section>
       {props.uri.match(/episodes/) ?
       <SimilarEpisodesList
         currentEpisodePath={props.path}

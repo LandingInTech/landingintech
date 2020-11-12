@@ -1,3 +1,5 @@
+const remarkSlug = require(`remark-slug`)
+
 module.exports = {
   siteMetadata: {
     title: `Landing in Tech`,
@@ -38,6 +40,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       extensions: [".mdx", ".md"],
       options: {
+        remarkPlugins: [remarkSlug],
         defaultLayouts: {
           default: require.resolve("./src/templates/episode-layout.js"),
           articles: require.resolve("./src/templates/articles-layout.js")

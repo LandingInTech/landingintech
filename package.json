@@ -35,6 +35,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.8.6",
     "react-typography": "^0.16.19",
+    "remark-slug": "^6.0.0",
     "tailwindcss": "^1.8.10",
     "typography": "^0.16.19"
   },

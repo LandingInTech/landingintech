@@ -117,7 +117,6 @@ export const pageQuery = graphql`
             date(formatString: "dddd Mo, MMM YYYY")
             title
             excerpt
-            image
             tags
             category
           }
