@@ -8,10 +8,10 @@ const React = require("react")
 const SoundCloud = require("./src/components/soundcloud-iframe").default
 
 exports.wrapPageElement = ({ element }) => {
-    return (
-        <>
-            <SoundCloud />
-            {element}
-        </>
-    )
+  return (
+    <>
+      <SoundCloud />
+      {element}
+    </>
+  )
 }

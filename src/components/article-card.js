@@ -6,19 +6,18 @@ const ArticleCard = data => {
   const slug = data.details.fields.slug
 
   return (
-    <div className="article-card my-8">
-      <div className="episode-text">
+    <div className="article-card">
         <Link to={slug}>
-          <p className="article-title font-bold">{details.title}</p>
+          <h3 className="article-title">{details.title}</h3>
           <p>{details.excerpt}</p>
-          <p className="article-read-more">Read more...</p>
-          <p className="text-sm mt-2">
-          {details.tags.map(tag => (
-            <span className="article-tag" key={tag}>{tag}</span>
-          ))}
-          </p>
+          <div className="flex flex-wrap text-sm mt-2">
+            {details.tags.map(tag => (
+              <div className="article-tag" key={tag}>
+                {tag}
+              </div>
+            ))}
+          </div>
         </Link>
-      </div>
     </div>
   )
 }

@@ -33,8 +33,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `articles`,
-        path: `${__dirname}/src/pages/articles`
-      }
+        path: `${__dirname}/src/pages/articles`,
+      },
     },
     {
       resolve: `gatsby-plugin-mdx`,
@@ -43,7 +43,7 @@ module.exports = {
         remarkPlugins: [remarkSlug],
         defaultLayouts: {
           default: require.resolve("./src/templates/episode-layout.js"),
-          articles: require.resolve("./src/templates/articles-layout.js")
+          articles: require.resolve("./src/templates/articles-layout.js"),
         },
       },
     },

@@ -16,7 +16,13 @@ const LatestEpisode = data => {
         <h1 className="card-title">{details.title}</h1>
       </Link>
       <div className="images-area">
-        <img src={left} alt="" className="decoration" />
+        <img
+          src={left}
+          alt="decoration"
+          className="decoration"
+          width="133"
+          hight="171"
+        />
         <Link to={slug}>
           <Img
             className="avatar"
@@ -24,7 +30,13 @@ const LatestEpisode = data => {
             fluid={details.avatar.childImageSharp.fluid}
           />
         </Link>
-        <img src={right} className="decoration" alt="" />
+        <img
+          src={right}
+          className="decoration"
+          alt="decoration"
+          width="133"
+          hight="171"
+        />
       </div>
       <Link to={slug}>
         <p className="guest-name">{details.guest}</p>

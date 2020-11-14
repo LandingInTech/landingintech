@@ -15,14 +15,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         name: `slug`,
         node,
         value: `/articles${value}`,
-    })
+      })
     } else {
       createNodeField({
         name: `slug`,
         node,
         value: `/episodes${value}`,
-    })
+      })
     }
-
   }
 }

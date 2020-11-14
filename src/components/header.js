@@ -12,14 +12,16 @@ const Header = () => (
       <Link className="nav-link m-4" to="/about">
         About
       </Link>
-      <Link className="nav-link m-4" to="/articles">Articles</Link>
+      <Link className="nav-link m-4" to="/articles">
+        Articles
+      </Link>
       <Link className="nav-link m-4" to="/contact">
         Contact
       </Link>
     </div>
 
     <Link className="mx-8" to="/">
-      <img src={Logo} alt="Landing in Tech" />
+      <img src={Logo} alt="Landing in Tech" width="196" height="95" />
     </Link>
 
     <div>
@@ -35,7 +37,9 @@ const Header = () => (
       <a href="https://discord.gg/ZUk4eRh" className="nav-link m-4">
         Community
       </a>
-      <Link className="nav-link m-4" to="/newsletter">Newsletter</Link>
+      <Link className="nav-link m-4" to="/newsletter">
+        Newsletter
+      </Link>
     </div>
   </header>
 )

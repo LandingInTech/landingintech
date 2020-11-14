@@ -135,14 +135,36 @@ label {
     }
 
     blockquote {
+        position: relative;
         background: $light-bg-color;
         border-left: 5px solid $red;
         margin: 1.5em 10px;
         padding: 0.5em 10px;
         font-style: italic;
 
+        &::before {
+            content: "“";
+            background-color: $red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            top: 0px;
+            left: 0px;
+            transform: translateX(-50%) translateY(-25%);
+            font-variant: all-small-caps;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.25rem;
+            border-radius: 50%;
+
+        }
+
         p {
-            display: inline;
+            display: flex;
+            flex-direction: column;
         }
 
         a {

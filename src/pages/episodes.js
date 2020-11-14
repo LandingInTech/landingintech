@@ -19,7 +19,10 @@ export default props => {
 
 export const pageQuery = graphql`
   query {
-    episodes: allMdx(sort: { fields: [frontmatter___date], order: DESC }  filter: {fields: {slug: {regex: "/episodes/"}}}) {
+    episodes: allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { slug: { regex: "/episodes/" } } }
+    ) {
       edges {
         node {
           frontmatter {
