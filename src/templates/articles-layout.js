@@ -15,7 +15,7 @@ export default props => {
       articles: allMdx(filter: { fields: { slug: { regex: "/articles/" } } }) {
         nodes {
           frontmatter {
-            date(formatString: "dddd Mo, MMM YYYY")
+            date(formatString: "dddd, DD MMM YYYY")
             title
             excerpt
             tags
@@ -25,6 +25,7 @@ export default props => {
             slug
           }
           tableOfContents
+          timeToRead
         }
       }
     }
@@ -43,7 +44,7 @@ export default props => {
   const pageTitle = frontmatter.title
 
   const { width } = useWindowsDimentions()
-
+  
   const hideTableOfContents = localStorage.getItem("toc")
 
   return (
@@ -54,7 +55,18 @@ export default props => {
       ) : (
         ""
       )}
-      <section className="mt-16 md:mx-12 mdx">{props.children}</section>
+      <section className="mt-16">
+        <h1 className="text-2xl md:text-5xl text-center">{frontmatter.title}</h1>
+        <p className="mt-5 flex text-xs justify-center">
+          <span className="flex mr-4 items-center"><i className="gg-calendar mr-2 red"/> {frontmatter.date}</span>
+          <span className="flex mr-4 items-center"><i className="gg-eye mr-2 red"/> {mdx[0].timeToRead > 1 ? `${mdx[0].timeToRead} mins to read` : `${mdx[0].timeToRead} min to read`} </span>
+          <span className="flex items-center"><i className="gg-tag mr-4 red" />{frontmatter.tags.join(", ")}</span>
+        </p>
+        <article className="mt-12 md:mx-12 mdx">
+          {props.children}
+        </article>
+
+      </section>
       <section className="newsletter-cta flex flex-col md:flex-row justify-around p-6 mx-12 mt-6">
         <div className="md:w-1/2 mt-6 md:mt-12">
           <h1>Don't miss out!</h1>
