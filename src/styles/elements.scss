@@ -134,33 +134,79 @@ label {
         padding-top: 1rem;
     }
 
-    blockquote {
+    .quote::before {
+        content: "“";
+        background-color: $red;
+        color: $dark-bg-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        top: 0px;
+        left: 0px;
+        transform: translateX(-50%) translateY(-25%);
+        font-variant: all-small-caps;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.25rem;
+        border-radius: 50%;
+    }
+
+    .information::before {
+        content: "i";
+        background-color: $red;
+        color: $dark-bg-color;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        top: 0px;
+        left: 0px;
+        transform: translateX(-50%) translateY(-25%);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.25rem;
+        border-radius: 50%;
+    }
+
+    .warning{
+        position: relative;
+        background-color: #fc40561c;
+        border-left: 5px solid $red;
+        margin: 1.5em 10px;
+        padding: 1em;
+        font-style: italic;
+
+        &::before {
+            display: inline-flex;
+            justify-content: center;
+            text-align: center;
+            content: "!";
+            position: absolute;
+            color: $dark-bg-color;
+            width: 35px;
+            height: 35px;
+            top: 0;
+            left: 0;
+            transform: translateX(-50%) translateY(-25%);
+            background-color: $red;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25rem;
+            clip-path: polygon(50% 0,0 100%,100% 100%);
+        }
+    }
+
+    .highlight {
         position: relative;
         background: $light-bg-color;
         border-left: 5px solid $red;
         margin: 1.5em 10px;
-        padding: 0.5em 10px;
+        padding: 1em;
         font-style: italic;
-
-        &::before {
-            content: "“";
-            background-color: $red;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            width: 35px;
-            height: 35px;
-            top: 0px;
-            left: 0px;
-            transform: translateX(-50%) translateY(-25%);
-            font-variant: all-small-caps;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 2.25rem;
-            border-radius: 50%;
-
-        }
 
         p {
             display: flex;
