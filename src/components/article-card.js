@@ -7,17 +7,17 @@ const ArticleCard = data => {
 
   return (
     <div className="article-card">
-        <Link to={slug}>
-          <h3 className="article-title">{details.title}</h3>
-          <p>{details.excerpt}</p>
-          <div className="flex flex-wrap text-sm mt-2">
-            {details.tags.map(tag => (
-              <div className="article-tag" key={tag}>
-                {tag}
-              </div>
-            ))}
-          </div>
-        </Link>
+      <Link to={slug}>
+        <h3 className="article-title">{details.title}</h3>
+        <p>{details.excerpt}</p>
+        <div className="flex flex-wrap text-sm mt-2">
+          {details.tags.map(tag => (
+            <div className="article-tag" key={tag}>
+              {tag}
+            </div>
+          ))}
+        </div>
+      </Link>
     </div>
   )
 }

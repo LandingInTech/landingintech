@@ -42,7 +42,7 @@ export default props => (
         episodes: allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
           filter: { fields: { slug: { regex: "/episodes/" } } }
-          ) {
+        ) {
           edges {
             node {
               frontmatter {
