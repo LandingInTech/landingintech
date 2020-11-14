@@ -31,13 +31,16 @@ export default props => {
     }
   `)
 
+  
   const mdx = allMdx.articles.nodes.filter(article => {
-    if (article.fields.slug === props.path) {
+    if (article.fields.slug === props.location.pathname) {
       return article
     }
   })
-
-  const { frontmatter } = mdx[0]
+  console.log("\n\n\n\nTesting mdx! \n\n\n\n")
+  console.log(JSON.stringify(mdx))
+  
+  const { frontmatter } = mdx[0] || mdx
   const ogTitle = frontmatter.title.replace(/\s+/g, "%20").toUpperCase()
 
   const ogImageSrc = `https://res.cloudinary.com/fabiorosado/image/upload/q_100/c_fit,co_rgb:0efb69,l_text:orbitron_50_style_bold_text_align_center:${ogTitle},w_1012,y_30/v1605190182/twitter_og.png`
