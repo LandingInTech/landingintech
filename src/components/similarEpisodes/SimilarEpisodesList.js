@@ -39,7 +39,10 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        episodes: allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+        episodes: allMdx(
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: { fields: { slug: { regex: "/episodes/" } } }
+          ) {
           edges {
             node {
               frontmatter {
