@@ -215,6 +215,7 @@ label {
 
         a {
             margin-top: .5rem;
+            color: $light-red;
         }
     }
 }
@@ -235,9 +236,10 @@ label {
     z-index: 10;
     width: 20%;
     right: 1.5rem;
-    background-color: #37275c;
-    border: 1px solid #fc4056;
+    background-color: $dark-bg-color;
+    border: 1px solid $red;
     padding: 1rem;
+    margin-top: 5rem;
 }
 
 .hide-out {

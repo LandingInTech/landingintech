@@ -94,7 +94,7 @@ const IndexPage = props => {
       <PastEpisodes />
 
       <section className="my-12">
-        <h2 className="mb-0 green-plane underline red">Latest Articles</h2>
+        <h2 className="mb-5 green-plane underline red">Latest Articles</h2>
         <div
           className={
             articles.length > 3
