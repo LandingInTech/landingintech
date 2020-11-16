@@ -257,3 +257,44 @@ label {
         right: -400rem;
     }
 }
+
+.navbar {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+  transform: translate(200%);
+  position: fixed;
+  background-color: $dark-bg-color;
+  top: 0rem;
+  height: 100%;
+  z-index: 40;
+  padding: 4rem;
+  border-left: 1px solid $light-bg-color;
+}
+
+.navbar-show {
+  transform: translateX(40%) !important;
+  transition: all .25s ease 0s;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 1rem 5rem 2rem 1rem;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  a {
+    margin-top: .5rem;
+  }
+}
+
+.navbar-hide {
+  transform: translate(200%);
+  transition: all .5s ease 0s;
+}
+
+.menu-button {
+    position: absolute;
+    top: 35px;
+}

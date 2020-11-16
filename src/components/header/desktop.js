@@ -1,10 +1,11 @@
-import { Link } from "gatsby"
 import React from "react"
+import { Link } from "gatsby"
 
-import Logo from "../images/logo.svg"
+import Logo from "../../images/logo.svg"
 
-const Header = () => (
-  <header className="flex justify-center flex-col md:flex-row items-center text-lg">
+const DesktopHeader = () => (
+
+  <header className="text-lg">
     <div>
       <Link className="nav-link m-4" to="/">
         Home
@@ -20,7 +21,7 @@ const Header = () => (
       </Link>
     </div>
 
-    <Link className="mx-8" to="/">
+    <Link className="mx-8 logo" to="/">
       <img src={Logo} alt="Landing in Tech" width="196" height="95" />
     </Link>
 
@@ -44,4 +45,5 @@ const Header = () => (
   </header>
 )
 
-export default Header
+
+export default DesktopHeader

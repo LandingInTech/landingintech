@@ -8,7 +8,10 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-import Header from "./header"
+import useWindowsDimensions from "../hooks/windows"
+
+import MobileHeader from "./header/mobile"
+import DesktopHeader from "./header/desktop"
 import "../styles/main.scss"
 
 const Layout = ({ children }) => {
@@ -22,9 +25,12 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const {width} = useWindowsDimensions()
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    {width > 530 ? <DesktopHeader siteTitle={data.site.siteMetadata.title} /> : <MobileHeader siteTitle={data.site.siteMetadata.title} />}
+      
       <main
         style={{
           margin: `0 auto`,
@@ -35,34 +41,39 @@ const Layout = ({ children }) => {
       >
         {children}
       </main>
-      <footer>
-        <Link className="nav-link md:m-4" to="/">
+      <footer className="text-sm">
+        <Link className="nav-link mr-4" to="/">
           Home
         </Link>
-        <Link className="nav-link md:m-4" to="/about">
+        <Link className="nav-link mr-4" to="/about">
           About
         </Link>
-        <Link className="nav-link md:m-4" to="/episodes">
+        <Link className="nav-link mr-4" to="/episodes">
           Episodes
         </Link>
-        <a
-          href="https://teespring.com/stores/landing-in-tech"
-          className="nav-link md:m-4"
-        >
-          Store
-        </a>
-        <a href="https://discord.gg/ZUk4eRh" className="nav-link md:m-4">
-          Discord
-        </a>
-        <a
-          className="nav-link md:m-4"
-          href="https://www.buymeacoffee.com/FabioRosado"
-        >
-          Donate
-        </a>
-        <Link className="nav-link md:m-4" to="/contacts">
-          Contacts
-        </Link>
+        {width > 280 && 
+          <>
+            <a
+              href="https://teespring.com/stores/landing-in-tech"
+              className="nav-link mr-4"
+            >
+              Store
+            </a>
+            <a href="https://discord.gg/ZUk4eRh" className="nav-link mr-4">
+              Discord
+            </a>
+            <a
+              className="nav-link mr-4"
+              href="https://www.buymeacoffee.com/FabioRosado"
+            >
+              Donate
+            </a>
+            <Link className="nav-link mr-4" to="/contacts">
+              Contacts
+            </Link>
+          </>
+        }
+
       </footer>
     </>
   )
