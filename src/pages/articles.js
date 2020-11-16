@@ -9,7 +9,7 @@ export default props => {
   return (
     <Layout>
       <SEO title="Articles" />
-      <section className="m-16 grid grid-cols-1 gap-4">
+      <section className="my-16 md:mx-16 grid grid-cols-1 gap-4">
         <h1 className="plane">Articles</h1>
         {props.data.articles.nodes.map(article => (
           <ArticleCard details={article} key={article.frontmatter.title} />

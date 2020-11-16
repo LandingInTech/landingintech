@@ -68,7 +68,7 @@ const Layout = ({ children }) => {
             >
               Donate
             </a>
-            <Link className="nav-link mr-4" to="/contacts">
+            <Link className="nav-link mr-4" to="/contact">
               Contacts
             </Link>
           </>
