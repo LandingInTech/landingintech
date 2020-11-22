@@ -2,14 +2,14 @@ const fetch = require("node-fetch")
 
 exports.handler = async (event, context, callback) => {
   const data = JSON.parse(event.body)
-  data["api_key"] = process.env.GATSBY_NEWSLETTER_API
+  data["api_key"] = process.env.GATSBY_NEWSLETTER_API_KEY
 
   const pass = body => {
     callback(null, { statusCode: 200, body: JSON.stringify(body) })
   }
 
   try {
-    const request = await fetch(process.env.GATSBY_BOOK, {
+    const request = await fetch(process.env.GATSBY_NEWSLETTER_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -21,6 +21,6 @@ exports.handler = async (event, context, callback) => {
 
     await pass(response)
   } catch (err) {
-    await pass(error)
+    await pass(err)
   }
 }
