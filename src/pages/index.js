@@ -99,7 +99,7 @@ const IndexPage = props => {
           className={
             articles.length > 3
               ? "grid grid-cols-1 md:grid-cols-3 gap-4"
-              : "grid grid-cols-1"
+              : "grid grid-cols-1 gap-4"
           }
         >
           {articles.map(article => (

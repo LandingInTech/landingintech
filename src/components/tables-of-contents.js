@@ -77,7 +77,7 @@ const TableOfContents = props => {
       >
         <i className="gg-close-o " />
       </button>
-      <summary>Table of Contents</summary>
+      <summary className="cursor-pointer">Table of Contents</summary>
       {renderItems(props.items, activeId)}
     </details>
   )

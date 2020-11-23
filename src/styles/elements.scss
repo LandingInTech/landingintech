@@ -298,3 +298,27 @@ label {
     position: absolute;
     top: 35px;
 }
+
+.series {
+    background-color: $dark-bg-color;
+    border: 1px solid $red;
+
+    ul {
+        list-style-type: none;
+        padding-left: 0rem;
+
+        li {
+            border-bottom: 1px solid $red;
+            padding: .5rem 0rem;
+            text-align: center;
+
+            &:first-child {
+                border-top: 1px solid $red;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
