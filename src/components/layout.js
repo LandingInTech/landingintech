@@ -25,12 +25,16 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const {width} = useWindowsDimensions()
+  const { width } = useWindowsDimensions()
 
   return (
     <>
-    {width > 530 ? <DesktopHeader siteTitle={data.site.siteMetadata.title} /> : <MobileHeader siteTitle={data.site.siteMetadata.title} />}
-      
+      {width > 530 ? (
+        <DesktopHeader siteTitle={data.site.siteMetadata.title} />
+      ) : (
+        <MobileHeader siteTitle={data.site.siteMetadata.title} />
+      )}
+
       <main
         style={{
           margin: `0 auto`,
@@ -51,7 +55,7 @@ const Layout = ({ children }) => {
         <Link className="nav-link mr-4" to="/episodes">
           Episodes
         </Link>
-        {width > 280 && 
+        {width > 280 && (
           <>
             <a
               href="https://teespring.com/stores/landing-in-tech"
@@ -72,8 +76,7 @@ const Layout = ({ children }) => {
               Contacts
             </Link>
           </>
-        }
-
+        )}
       </footer>
     </>
   )

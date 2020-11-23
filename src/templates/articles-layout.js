@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import useWindowsDimentions from "../hooks/windows"
@@ -10,48 +10,44 @@ import TableOfContents from "../components/tables-of-contents"
 import SimilarArticlesList from "../components/similarArticles/SimilarArticlesList"
 
 export default props => {
-
   const [hideTableOfContents, setHideTableOfContents] = useState(null)
 
   useEffect(() => {
-    
     setHideTableOfContents(localStorage.getItem("toc"))
   }, [])
-  
+
   const allMdx = useStaticQuery(graphql`
-  query {
-    articles: allMdx(filter: { fields: { slug: { regex: "/articles/" } } }) {
-      nodes {
-        frontmatter {
-          date(formatString: "dddd, DD MMM YYYY")
-          title
-          excerpt
-          tags
-          category
+    query {
+      articles: allMdx(filter: { fields: { slug: { regex: "/articles/" } } }) {
+        nodes {
+          frontmatter {
+            date(formatString: "dddd, DD MMM YYYY")
+            title
+            excerpt
+            tags
+            category
+          }
+          fields {
+            slug
+          }
+          tableOfContents
+          timeToRead
         }
-        fields {
-          slug
-        }
-        tableOfContents
-        timeToRead
       }
     }
-  }
   `)
-  
+
   const mdx = allMdx.articles.nodes.filter(article => {
     if (article.fields.slug === props.location.pathname) {
       return article
     }
   })
-  
+
   const { frontmatter } = mdx[0]
   const { width } = useWindowsDimentions()
-  
+
   const ogTitle = frontmatter.title.replace(/\s+/g, "%20").toUpperCase()
   const ogImageSrc = `https://res.cloudinary.com/fabiorosado/image/upload/q_100/c_fit,co_rgb:0efb69,l_text:orbitron_50_style_bold_text_align_center:${ogTitle},w_1012,y_30/v1605190182/twitter_og.png`
-
-
 
   return (
     <Layout>

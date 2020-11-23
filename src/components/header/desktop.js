@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import Logo from "../../images/logo.svg"
 
 const DesktopHeader = () => (
-
   <header className="text-lg">
     <div>
       <Link className="nav-link m-4" to="/">
@@ -44,6 +43,5 @@ const DesktopHeader = () => (
     </div>
   </header>
 )
-
 
 export default DesktopHeader
