@@ -1,0 +1,437 @@
+# Ep8 - Transcript
+
+Episodes transcripts are powered by [Otter AI](https://otter.ai/referrals/QBP83YEZ), this is an awesome service that transcribes the audio, the grammar it's not perfect and there are some inconsistencies with punctuation and casing, but it's quite accurate to turn sounds into words.
+
+If you wish you could edit the transcript on the Landing In Tech [GitHub Repository](https://github.com/LandingInTech/landingintech/blob/master/src/pages/transcripts/ep4-jacob-tomlinson.mdx)
+
+## Jhey Tompkins - On making learning fun
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Hello, today I am joined by Jhey, he's a senior software engineer author wrote for CSS tricks and Smashing Magazine, is also a egghead instructor jhey did a CS degree and a Master's science in financial system engineering, which is very complicated and Jhey you do awesome animations using pure CSS, and also greensock how are you doing today?
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+I'm doing great. You've done your research. Not many people know about my CSS MSC background. Yeah, I'm great, I'm great. It's Monday so it's pretty chill day for me, the weekend. It was full, so yeah Monday's like get back into the swing and then kick start the week and everyone has all their plans, how about you. How you doing, I've seen you've been really busy with your Hacktoberfest and you've been doing the... I was forgetting name is droid something?
+
+<p class="transcript-fabio">Fabio Rosado</p> 
+Yeah, opsdroid. Yeah
+
+<p class="transcript-guest">Jhey Tompkins</p>   
+That's it, opsdroid, it's the other way around. I see murmurings about that, and I often tune in, when you're doing stuff, but I'm not 100% sure what's going on. So, yeah, that's interesting to see.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+I did the four needed prs for the shirt, then I've been a bit quiet. But now I'm on holiday so I'm trying to get back into it again. My goal is to do at least 15 prs for the month of October, so let's see how that's going to go,
+
+<p class="transcript-guest">Jhey Tompkins</p>  
+what is your. What's your next, what's your next feature or plan for it?
+
+<p class="transcript-fabio">Fabio Rosado</p> 
+well I'm trying to migrate the old Twitter connector to opsdroid. I'm trying to use the webhooks. But, or yeah I just haven't figured out how to subscribe to the web hook, because they expect it to send a specific string on the header. And I keep getting like bad authentication data for some reason, and then some places they say that you need to get a bearer token. I haven't, I haven't figured it out there yet, but I want to work on that.
+
+<p class="transcript-guest">Jhey Tompkins</p>   
+Now this stuff's really interesting. It's really interesting to see what everyone's working on. Obviously, people have different specialties or different areas of interest, and it's pretty inspiring to see what people get up to. And that's one thing like even if you don't understand it, it might spark an idea or something for something else, which is. Yeah, it's nice to see. So 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+yeah, definitely, 
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+which is a great commuity up seeing that kind of stuff. 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Yeah, I also want to do some more of react stuff, because I feel that I've been doing python for a while since the beginning of October. I'm like I need to at least get one project that it's like a react project or something like that to get that in as well.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+So I've been up in my stream and I had a project I wanted to make for probably a couple of years, and I finally sat down to make it last week so I've been doing two hours a day, and the stream, and I've been making like an electron app with react and parcel bundler. And what it does is it takes a. This is why I wanted to see if I get my overhead camera to zoom  but and kind of show a rough note. It does. So what you do is you open the app, and it gives you a grid. If you're on my stream you see this on the overhead but you get a grid you draw on the grid, then you fill in GitHub user name, your repository that you're going to push it to. And then the branch and what it does is it takes an image that you've drawn on this grid and pushes it to your GitHub contributions graph, so you're able to draw images on your profile, because who really looked at the contributions graph, seriously anyway right. So,
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+that's true. And I love that because I remember when you're working on the pixel art generated thing. 
+
+<p class="transcript-guest">Jhey Tompkins</p> 
+Yeah, 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Do you what I mean. The one you can draw?
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+ pxl 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+pxl exactly I didn't remember the name of it and yeah that was, that was such a cool project that you've built so yeah,
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+that's the thing I don't, I often do. I have some do like demos, I like a one off demo, and I was saying, for Hacktoberfest  I'm going to actually create a project, doing something I haven't done so I haven't done electron but I haven't really done a lot of electron. And I thought, I'll just write something from scratch and it's been really good because normally my streams are like make a demo, make something whimsical push it out the door, and everyone can see it. Whereas this I've started from scratch and kind of learned something along like along the way every day, where it's like design or like just different packages even, so I keep notes every day I haven't written anything up yet but just the hurdles you hit with doing this kind of thing. So, the way the project works and I kind of had an idea for how it would work is that you you're drawing you want but those little boxes equate to an amount of commits. And then what happens is I use node in the background to generate a shell script that basically creates empty commits for every commit to colour the graph. So I did like a dress test of it. I just completely dark greened out my whole contributions graph, and I think it made something like 75 k commits
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+wow
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+And it took about 10 minutes to run the shell script, and it took about another 10 minutes to actually render on GitHub, but once it was there it was something like yeah about 70 k contributions but my complete graph was dark green. So, yeah, it's just been funny like so if we, so you can run the shell script yourself. But when you try and run it through node, you end up with like a buffer limit exception, which I didn't foresee, but if you run it through nodes child process spawn like spawn sink or exec sink through child process, you can actually run it all, but the app beach balls. Is it really interested to come across these problems like. And it's just been a bit different, as you say, normally it's SVG animation or CSS animation or something fun with sounds I don't know, just something random.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+So, two questions first Do you think that you're going to have enough time to dedicate to this project since you have always a lot of things going on? And are you enjoying the change of work from animations to something like electron based and where are you solving all these sort of problems that you wouldn't do with animations.
+
+<p class="transcript-guest">Jhey Tompkins</p> 
+Yeah, so you're aware, I have a bit more time at the moment, because I'm not working, which is kind of, sort of, I don't know, I'm entertaining opportunities again, but I'm sort of on a I guess a mini sabbatical. So, but this projects been great because it's kind of given me a bit of a structure in the day. As I've just been kind of like. So to start with, because I'm normally doing X amount of things at once. I found it really hard to switch off and just take a rest, which is the reason why I stopped working to take a rest and work out what the next step is, I found that really hard, and I do find that quite hard like mentally it's quite hard for me to switch off without things to do and just accept that it's okay to step away from the keyboard and I think that's something that a lot of people have problem with like it's, but it's fine. I've even written articles, I've wrote articles about it. And I still have to go back and read them myself. So, but this has given me a good structure so actually have, I've all I've got the first proof of concept running for this and it, it works, and it's all open source it's up on GitHub, so people can pull it down and play with it will do what they want. But I always look for a way to squeeze some wimzie in so I have some animations that I'm going to push in some sounds. But yes, it's been fine i think i think it will be alright I think once I've got a bit more polished, I'll probably hit save on it, release it and then move on to the next thing. But I've been focusing a lot more on. I've been doing a bit of writing the last kind of week or so, one about 3d CSS which was I've done so many free dcss demos lately I'm kind of, I don't want to look at them at the moment but I've been working on one this morning so that didn't last long. And then the other thing was about learning and making learning fun, which has been quite interesting to step back and think about it, because I never really think about it I just write ideas down, do it. And it's been a case of thinking about the motivation. So I think in a lot of times, people may be motivated by the force of learning x, and they need to learn, x, or they dwell on. I need to do react or I need to do electron, and instead of dwelling on the process or the, how. flip that around. Think of the why first or the what, what do you want to make. And that's kind of one of the, the switches for how I've ended up going on my path was, I stopped thinking about what I was going to use and how I was going to do it and just what I wanted to make. And that's how come all the demos are so random so instead of thinking. I want to I want to learn react, what can I make with that I can make a dashboard instead I'm thinking right I want to make a checkbox where a bear turns it on and off, and he gets angrier. Now I'll think about what I'm going to use to make it so you flip that process around and it kind of makes it, you kind of motivated by the fun of creating something that's unique not going to learn saying the learning parts the bonus and obviously it's a major part of it, but you kind of driven by the idea of like I'm gonna create something that you won't have seen before and it's the challenge of doing it and every time you create something that's like that. There's a new challenge, even if you use the same technologies you normally end up learning other parts of the API, because you've not needed to do something in a certain way before. Yeah, I kind of flipped it on that way. And I write down pretty much everything, and any idea that I get, no matter how silly just gets written down. Oh, I keep going on, I've written a whole article about this last week,
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+which I think your process it's very interesting so the whole fact of writing your ideas, and you actually have a notebook with your ideas. It's very interesting because if you don't know what you can work on. If you don't know what you feel like doing you can just go through your notebook and say Oh, this idea seems cool that I had, I don't know, maybe. Yeah, a year ago, and you say, Okay, I'm going to work on this. A lot of us we have lots of ideas, but we might not put them into paper, and sometimes not even on a notes online or anything and then all these ideas are just gone because you lose that that motivation to work on them, whilst if you have a place where you store your ideas, then you can always come back after a week, a month.
+
+<p class="transcript-guest">Jhey Tompkins</p> 
+I'd say as well like write them on paper if you can, but digitise them as soon as possible before you lose them. So I use a lot of people kind of seen my notebook, because I made a demo of my notebook. And I will sketch out as I go in this is kind of like fresh out the ideas or work out how I'm going to do something. But then I write everything in like a note taking app like notion or Trello or something like that just to have them somewhere. Yeah, and I don't write anything particularly in depth, unless there's something that particularly triggers an idea so I've. It's good timing this because I've just finished a draft for an article about this. So if I go into my notion and I'll just pick up some random ones and just. So I have like blog ideas and all that kind of stuff. So, so when I have at the moment is a twitch Tamagotchi powered by chat and azure that's one I want to make
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+That would be cool!
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+What else do we have the Peter Griffin blinds in CSS, I can do that. So many random ones in here. A 3d flipping laptop that opens and flips then makes a sound like the MacBook. It's just little list is endless like there's just so many random ones in here, I have a big table that I keep with just like code pen ideas. And I have like a front I'm terrible organised and then I have like a front page, where they just go in to start with and then I sort them out afterwards. but yeah just really random ones there's... what else do I have?
+
+Lego builder... I'll do, like, it's where your inspiration comes from as well so I have one here that just says create the delivery frying pan animation. So, I've probably seen the deliveroo app. My girlfriend's pretty good at this when she sees little animations or things and she thinks you could make that she screenshots and sends them to me
+
+<p class="transcript-fabio">Fabio Rosado</p>
+that's really cool.
+
+<p class="transcript-guest">Jhey Tompkins</p>   
+So I often have like a link or something to go off of. But normally it's just keywords, so I have like skipping bear, Canvas sonar sound, that's one. There's just so many, and like, you'll know I'll never have time to create them all, but I'm never short of an idea, just kind of the reason I say to people like don't dwell on the amount of them, just keep writing them down, because like you'll always have something to go to. And it doesn't matter how ridiculous it sounds, or how far fetched it seems. Even if you come across something and you think there's no way I'd know, but it starts you on a journey where you begin to find ways of doing things. And maybe you have to slightly scale back your idea or take it in a slightly different direction but it will give you something that you learn and something you created and takes you on a journey of getting something out is, it's, it's a nice way of doing things.
+
+<p class="transcript-fabio">Fabio Rosado</p> 
+And then, like you said, if you are working or if you want to work on an idea, and you have no idea how to get there. It's where that planning comes along and if it's one thing that I struggle, all the time is. I have an idea. And I say okay I don't know how to do this, but I will just start VS code and start hacking away till it gets done. And this is one thing I know I need to work on is the planning phase, which can save you a lot of time, a lot of headaches. And you, if you plan properly you know exactly what to search for and they probably will find some edge cases where you might not have think through but then, because you did your research, you know exactly what you can test and what can fail and all of these things. And yeah, this is one thing with experience.
+
+<p class="transcript-guest">Jhey Tompkins</p>
+Yeah, I think it. It's interesting because the bigger your project, the more plan like you need or the more kind of idea of what you're going to do you need so my current project is an I just call it Vincent van get that has been in this list for like two years. And that one kind of strategy maybe or tactic. If you are struggling with a project idea or something, is to take a project that you like or something or something that you've seen that you think I could make that but I could improve on the fits that I don't like. Take it into this project was born from I use a product called Get 50, which is a Python script, and it's Python script that generates a shell script that you run, and it's all done in the command line, and then it updates your visions graph have an image. So I don't mind running that but every sort of two and a half to three months you have to run it. And you have to remember how to run it, and to draw the images that you want. It's an array of nested arrays, with zeros ones twos threes and fours, so you have to kind of work it out on paper in a grid, what that is arrays are going to be. So I was like, you know, I don't like this anymore. I want a visual way of doing it, tapping a button and gone might have to think about and I'll just run that every three months, so that's why the project, kind of started and kind of be driven by that idea of. I can take that and improve upon it and make it my own, that kind of thing. So that's another way of going about things. I don't know what made me think of that, just run engine. Oh, that was it. I remember we were saying about projects and planning, so yeah but the smaller things it's not so bad because you if you just do a demo, or something for code pen. So you haven't invested too heavily into it so you don't need to plan as majorly so some of my streams will obviously be like when I was doing the vote for the idea, which I should really bring back. I would do no planning at all, everything you see on stream is like for me taking those five words which I've jotted in a nest to writing it on paper to creating the things or pushing it to codepen. I there's no, there's no planning. So,
+
+<p class="transcript-fabio">Fabio Rosado</p> 
+and for the folks that don't follow you on Twitter, I think it's every Friday, you can correct me on that, every Friday you, you make a poll or used to make a poll on Twitter
+
+<p class="transcript-guest">Jhey Tompkins</p>   
+yeah 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+asking folks what they wanted to see, and whatever has the most votes, you would create
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+I would make. Yeah, I need to bring that back because I kind of stopped doing it because I believe, why three shirts sets you about this. I just took on too much for a period of time, and it just, I just felt like, exhausted. I was doing that writing training lessons I had a full time job, I just couldn't do it all, but I'm slowly getting back into the swing of it again now so like I've been doing the two hour streams every day like I'll do once a day. And it's much more manageable and getting better at managing the time, and I think that's kind of a hard thing to get around especially if you're not the most organised like me.
+
+I think working from home, makes it harder as well. 
+
+I...
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+it's a bit weird. But, Yeah.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+See I kind of have the advantage I guess there, have you... see you're not you, you work on planes right so there's no real remoteness there.
+
+<p class="transcript-fabio">Fabio Rosado</p> 
+Yeah, not on that one.
+
+<p class="transcript-guest">Jhey Tompkins</p>   
+I, I've always the majority I've done a few on site contracts, but I've worked remote pretty much my whole career. So I'm kind of used to that and I'm quite good at disciplining myself to work but the part I'm not good at discipline myself to stop, which is not ideal. I have to sort of drag myself away and I always encourage people if they do work remote. Find hobbies that you do outside of work that have like strict times because they make you go away. They kind of break time off so like for me I play sport, quite a lot during the week I play Saturday afternoon I play soccer or football depend on the audience, and Sunday mornings as well so I have to be there, I have to be there for kickoff I have to be there for training during the week, and it just gets me away from the keyboard and then I forget about coding and then I'm in that other world for a bit, and then I come back and it's like, I'm not even thinking about that so it's fine. Yeah remote is,
+
+it's interesting how different people have taken remote on in the last like, What is it now four or five months,
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+yes something like that.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+It was horrible. 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Yeah. Yeah, I think it's very hard if you're working fully remote is very hard for you to switch off, especially when you are actually enjoying what you do. 
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Yeah,
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+you think, yeah, I'm a little bit tired but it's fine I will keep on going. It's fine, it's fine and then after a while you hit the wall and like... damm... I need to take a break. And I think that's what happened to you a couple months ago, was it a month ago?
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Yeah... I've had it. I've had it that way and I've had it the flip way like if you try and go cold turkey. I can make it even worse. So, I was forced to take some time around Christmas just because I never take holidays, and it was, you've got all this whole it like you need to take time off so took time off. And I just ended up hating because I was doing nothing, so it's like a you have to find that balance is really tough. I have like lots of distractions though, around the house so like I have the dip bars obviously which I use in the stream, and then and then I have like a bar outside I have stuff like dotted around the house, and I'll just go and like be outside, do some rounds on the bar and stuff like that and just mess around. Just try and distract myself of other things really just so I'm not doing like, like you say just sitting in the chair for like hours thinking I'll just do that now, or watching YouTube, and then I'll do this and you just like for you know the days gone and they're just all rolled into one. It's no good.
+
+<p class="transcript-fabio">Fabio Rosado</p>
+Yeah. So let me take you way back. How was this passion for development, came to be. So you took a CS degree, so I'm sure there's been something that you've done when you're very young, or you found that passion very young.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Well, This is where, and this is where I find it quite interesting to talk about an I always muffled history so yeah people always assume that I've probably been playing with computers for a long time, but I really didn't, I didn't even want to do. I didn't even want to do a CS degree, I wanted to be an architect. And I wanted to do, architecture, that was my thing. I really like drawing, and doing isometric stuff. And then I started doing. I've only I recently started doing isometric animations, like the start of the year or sometime this year I did like an SRS and he won a traffic scene and stuff I should do another one. Write that down. But yeah, I really like doing technical drawing for that so I did my, A levels and I did math. I think physics and some other stuff and I did IT. And IT is nothing like CS or it wasn't at my school it's like Excel and things like that. And it's basically a case of my math wasn't good enough to do architecture, it was going to be a struggle for me to get in where I wanted to go. So I went off and viewed some universities, and I ended up going to King's in London, doing CS, because it was suggested to me that I'd be good at computer science, and I liked the idea of it, but in the first term I absolutely hated it. And I was ready to throw it all in and not bother anymore, and just do something else completely different, and...
+
+<p class="transcript-fabio">Fabio Rosado</p> 
+Was it all the math?
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Um, it was just the concepts just didn't hit with me at all. I like the idea of it but then like I had my classmates around me that understood it and just didn't gel with me at all like we're doing things like low level logic and you know when you learn when you learn all the starting things, just like state charts and things and all this stuff and it's brand new to me and I just, I just didn't gel with me at all like, I was driven by getting out on my BMX bike. That was what I used to do like going out doing tricks and now I was in London I just wanted to go and ride Street and ride skate parks and stuff and that was why I love doing hanging out my friends doing that. And, yeah, I mean I tried to do the CS stuff and it just wasn't clicking and for some reason, something clicked between the first half of the second term, it must have been a module or something, and I just started going right I'm just gonna do it I'm just gonna get on with it. And it just started getting better I stopped going in a lot of the time and I used to take all of the notes and learn them myself, and then turn up for the things I had to be there for. And just turn it for the test, and I just learned it all on my own back. And I just got my sort of routine like that so I'd wake up kind of late, because there's obviously a student who stay up late. And then I do notes, huge bowl of crunchy nut. And that's how I that's how I did it and I did my first degree in CS, and found that I really liked doing kind of UI stuff, I did like a social networking app in C sharp. I think for my final year project. It was like hooked up with I had this huge book on C sharp. And it was all like built in Visual Studio and you could do like computer computer like network someone could log in on one and you could tag each other and stuff is quite cool. The UI look terrible. That was probably my first intro to like styling, choosing colours in the UI like oh I want this colour to be green. That's about as far as my CSS went, and then yeah I did my masters and there wasn't a lot of coding in that but the coding there was, was fun because I was able to just jump in and do that. And I actually didn't do any front end until I was sort of a year or two into my career, I actually started as a middleware engineer, and I did enjoy doing it but I'd never really do coding outside of my course like I'd be the guy I'd be like right I want to get my coursework out the way so I can go to the skate park with my friends. I yeah I had no real drive to do it outside and even when work I had no drive to outside of work, I, and I just written up the history on this for this article I'm writing so it's quite, it's all fresh in my mind which is quite nice but even when I started work. I started work remotely, and my drive was always right I get work done, and then I can play video games with my friends, and I can go take driving lessons, and I can go and play football gets football training. Can  I leave work early so I've got practice. Yep. Cool. And code was just the, you know, pay the bills, like I wasn't that bothered by it. And then I got introduced the front end, and it was just the fact that it was so accessible. I could just open a browser, write something in a text file and see it instantly changed there in front of me, and I could just explore it and there was no running loads of processes so I was working with Java a lot. And there was no like big I was using. I want to say like IntelliJ or something like that. And I want to say like Maven that's it's rolling back the years for me now. By doing things like that. And just, yeah, just as soon as I found front end it was like well I can just go off explorer and I can find this and that and it must have been about the time that CSS animation and CSS 3d transforms were rocking in. And that was why
+
+that was what I focused on that was like the first thing I learned before I did like layouts and colours and typography and anything like that. I jumped straight into doing 3d transforms and animations I like this is cool. I'm going to do that. So I kept plugging away and making things and html5 drag and drop was something that was fresh. I built like a little Trello clone with it, and I styled it up and I threw it on Hacker News, because someone had told me like, oh you put things there and people look at it. Well, they actually went and it hit the top of the page for like a day and a half or so, and there were loads of people just saying like, Oh, you should do this you should do that this is pretty bad for usability but, and I, I've always kind of advocated humility, so just take it on board, and especially then like I was pretty Jr. and I'm just like, this is brilliant people just given me pointers for free. And I'm just getting this advice for free and I just went off and made new versions and it kind of kick started me to go off and make stuff, and that, at that point, that was the flicking switch that was when I was like, Well, tonight I'm going to work on this. And I'm going to work on that and now I'm going to look at this and I'm going to start making things all the time and that was what kicked it. And then I don't know, I think code pen was probably the catalyst for starting to make more fun things. From there, I am now here chatting to you. That's a brief history.
+
+<p class="transcript-fabio">Fabio Rosado</p> 
+So from your history, you could have built the old... new... whatever you want to call it, Facebook. 
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Yeah, I always I always get a bit not well. It's not even sound like it like I invented it but like I put a rudimentary form of tagging in my network so you could tag people and say things and then like, not long after like tagging was a thing anyway, and like those big likes Facebook was pretty new. When I was at university like it was you had to have your university email to get into it. It was at that early early stage. So, when you see tagging as I did tagging on mine. 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+It was me! 
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+But yeah, like it was, it was very basic, it was for. It was for like heritage sites and UK attractions so it was it wasn't like a generic kind of social thing it was for people that visited attractions and you could like tag the attractions so you'd be like, oh, today I went Stonehenge check it out, and like people could view it and like interact with it was quite cool for my third year project. Yeah, it's a long time ago there now.
+
+<p class="transcript-fabio">Fabio Rosado</p> 
+You sort of brought me back to my university years as well, because, so I took a tourism degree by mistake. 
+
+<p class="transcript-guest">Jhey Tompkins</p> 
+By mistake!? That's interesting.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+so I wanted to do. I did a journalism degree in high school, so college in the UK. And one of the classes that we had we had to create a product, and we had to create the whole marketing for that product, and I fell in love with the whole creating the marketing strategy and the thinking and brainstorming all these marketing ideas and stuff, and my friends, they are very creative very get ideas from nowhere you know so it was a very interesting process, and I thought you know what I want to do marketing. But when I went to register  for university, it was too late so the course was already full. So I decided, alright, I will do tourism, because at least In in University, and then after the first semester, I'll be able to change back and go to Marketing. So I did that and then they said no you actually have to do one year, and I was like oh man, okay so I did one year, I was like I'm not going back to year one so I'm just going to keep on going. But I think in three years I did maybe I attended two classes. Yeah, I was always in university with my friends and stuff, but I barely went to any classes so if you're listening to this and you're thinking to go to university classes are important. Alright.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+I think it's one of those... I think...
+
+it's it's really interesting so obviously there's the whole movement of, you don't need a CS degree to do this, and I do appreciate that side of things, but at the same time, for me personally without it. I wouldn't probably be here because it made me go off and learn different life skills and I met different people along the way that kind of inspired me to come along on this journey, I remember when I I lived in halls for my whole undergrad, and I met people that were like in the higher years, and I had a friend that was, he was a bit of a comedian. He was quite funny he would do things like so he had lots of cool side projects that he'd work on in halls, and he would do things like he would trick people in the common room to be like yeah I wrote this app, basically I use my camera and I take a photo of you. And then we go to my computer and I'll do something and then it will... and he would just like ruse people, so he would go back, you go to his room he had like a big projector he had like his room was amazing. And he would just do some commands in Terminal, but because none of us knew what was going on we just assume that what he was doing and what he's saying is true but you're just playing with you, like joke's on you. And those kind of people like you don't notice at the time but they definitely had an influence because the further down you go like, just having fun with it. And you're learning at the same time and it's just, yeah it's really interesting, and like, like you say you didn't go to classes for me I went I tried going to class all the time, it didn't work for me. What works for me is learning on my own. I like to learn in my own way at my own pace and whether that's quicker or slower than other people. I find it really hard to just listen to someone. It's not like I can't listen to people when they're having an actual discussion or saying but if someone's just dictating knowledge to me, I find that I find it hard to learn I just end up doing it twice because I'll end up listening, then I'll have to go and do it all again to take my own version. So it's...
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+yeah,
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+it's really interesting that. What did you do after? Did you just did you just decide right I've done that, I'm going to do something else, like, yeah, how did you end up where you are now.
+
+<p class="transcript-fabio">Fabio Rosado</p> 
+I just kept on going for... throughout the whole course in Portugal The university is pretty much free. If you're in the public university you can pay up to 600, euros for one year. If you are in a private university goes between like 2000 to 5000 depends what you take, obviously to take medicine is going to be more expensive. I said, you know, yeah I did one year, I have two more years to go, it's fine I'll just keep on going. Mind you, I'm very very bad at history, because I'm bad at knowing things by heart, and obviously I had history the whole three years! Halfway through my year to my dad lost his job. He was getting really... a really good salary, and he got a injury, and then he lost his job because that's when the crisis hit in Portugal - 2008. And I was like, Okay, I'm going to get a job, still study because I don't want my parents to keep paying for me. So I got the job of selling insurance, but I was like, in the middle of the shopping centre, just approaching people start talking to people and try to sell them insurance. It was really fun. It's not easy but it was a fun thing to do. And I was getting paid good money. So, the course was kind of like, okay, I want to finish it off just because I started it, but it was secondary in my idea because you know when you start getting good money you just don't really care about studies anymore. So I finished the course, and I did. I think like six months in Portugal. And then I was with, with my ex, and she couldn't find a job, I wanted to live abroad because I want to do Erasmus, which is, you do like six months or a year in a different country, different university so I decided, Okay, we can try to go to UK, I'll do maybe six months, see how it is find a job and then just see how it goes. I got a job as pot wash in UK. My dad we drove from Portugal, 26 hours, that was interesting. If you have to do it. Yeah, you have to more than 10 hours driving, make a day off, or a night off and have a break because doing 26 hours straight is crazy. Even if you have two drivers and yeah but then I was living with Raynair crew. And my housemates they were like, Oh, I see you're working the restaurants, you should you should apply to work for an airline. And I was like yeah that could be cool, but I'm not sure bla bla by then I was learning how to cook because I didn't even know how to cook, so the chef in the restaurant taught me how to cook. I did a bit of kitchen for six months as well and then I became a waiter so was like all hands on deck really do everything. And then one of my housemates he applied for the same airline as I'm working for. And I said, Alright, I'll go apply with you. And I got the job. So, this whole idea of staying here for six months, it became seven years so far. I don't really plan on going back to Portugal, to be honest I really enjoy UK. And obviously, I'm married now, my wife she's a teacher so I got my life in UK. Looking back, I think it was probably one of the best decisions that I've made, which was meant to be just for six months and then, yeah.
+
+<p class="transcript-guest">Jhey Tompkins</p> 
+It's so funny how those things work out right so like your journeys, taking you on this path which you probably never foresee and, like, similar to me I thought I was going to do something different. I've just something always happens right something always clicks at the right time or something just, it's really strange. I felt like so. I was just thinking this a second ago, because I was thinking of you said about fees and zoom well, UK fees like quite large. 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Yeah...
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+you have the, the fee for each term than the fee for like your living I can't remember they call that part. You get two parts to the loan one for the tuition one for... I want to say maintenance but I don't think it is that someone could correct me at some point but yeah so it's quite a lot each year and then by the end it was like, Well, do you want to do a master's and my mum actually pushed me to do that she was like you should do it you should do it you can do it now, do it now. And at the time, when I wasn't going to do it I had a rough idea of what I wanted to do. I still wasn't really sold on the idea of coding it was, I'd probably shown glimpses of being quite alright at it, but it wasn't something that I was strictly like into the idea of doing all the time and I actually really wanted to be like a consultant or something like that.
+
+business analysts kind of role, something like Accenture or something, I was really sold on that idea of like, I'm gonna be a consultant I'm gonna have a nice car, and I'm just gonna like wear suit, I'm gonna look cool. That was like my drive. I did my masters, and I ended up doing more coding and getting more into it. And I ended up doing a... so you had do a project over the summer, so you get like over a project or you get like a kind of like a technical internship, where you work on a project for a big company, and I worked with a group for a huge bank in Canary Wharf and, you know, giving the final presentation, and an actual startup company...  well not startup... they were a company came in and watch that presentation, and the director of that company. Then, at the time I didn't realise it but he got chatting to me and said hey do you want to come and come to this festival, and we'll put you up for board and you can see what you think and, and then I got a job offer, so I ended up working for that company for the first year doing like middleware stuff, so it's kind of interesting how things change. And then I was like I really like coding, I'm going to do coding, and then before I started, I'd started doing front end, and then I got a call to apply for a job at another big financial firm as a front end developer in a pretty decent role. Good start, very good salary and I thought, I made it! This is it. I'll be there for 20 years, I'll have everything I want and I left within three months, because I hated it that much. And that was when I found out that like, you know, what are you doing like corporate kind of settings, and I just want to be me, like, and from like I want to be my own character like this is what I like doing, I like making stuff and I like being me like I'm not suit and tie person, clearly, and I just want to do my own thing and when I got to that three months, and I was like, forget this I'm out the door now. I had no plans, I had barely any savings left, I was paying rent I didn't have my own house or anything like I do now I had no plans, and it was right, I'm going to start my own company, and I'm going to go contracting and freelancing. And it was tight. I mean it was tight at the start, but I just kept doing what I enjoyed doing and the contracts start coming in, and it kind of went from there and, and then to get my house I went and joined the company again and now I'm back to that point where I'm working out where I want to go again because driven more by the fact of wanting to do what I enjoy and not just hitting a peak and kind of staying there I want to keep going. And I think that's kind of important people to yes money's great, don't get me wrong and it pays the bills, and it's fantastic, but it's not everything really isn't. And it won't answer all your problems. I've been very very fortunate. I've ended up in positions or scenarios that, and don't get me wrong I've grafted very very hard over the last 10 years or so, to do the things I've done have the opportunities I've had but money doesn't answer it. And no matter how big a pay raise you negotiate. You can still end up feeling like it's missing. So follow what you enjoy is always what I kind of. Yeah, advocate.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+It's interesting that you say that because my talk with Kevin he did say when you are employed by someone, or when you're relying on that paycheck. It's a single point of failure, right. So if something happens, and unfortunately with the virus situation. A lot of people probably felt that companies closed they... they are not working anymore. And they felt that it's. If you rely on someone to pay your bills, that's a bad thing. When you do something that you have fun, and something that brings money on the side. You join the two worlds together and it's amazing, but I couldn't agree more. This was actually one thing that that we said, and I think probably one of the reasons why I didn't want to go back to Portugal, because in the UK. I don't have to think about money, and it's not like I'm getting an amazing salary or anything like that. But the life that I live, is enough for me to save to do stuff that I want to go on holidays if I want to. Whilst I know that in Portugal. I'm sorry that we get this less, and also living expenses are quite similar to UK, believe it or not, The prices went insane. So, yeah, it's your I was counting your money I was working paycheck to paycheck. So as soon as someone is able to see more than that paycheck at the end of the month. It just opens a whole new world, and it seems that you realise that.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Yeah, I mean, I kind of realised that quite early on, especially when I was doing contracting clients can pay you a substantial amount of money that's no secret, and especially if you are relatively good or, especially if you have a niche, you can charge a lot of money a day for things. And I'm not someone that's kind of driven by that it's more driven by, I want to work on this, and I want to do that. And the monies go not someone that just goes and spends it all so I'm like, I never sort of half. Unfortunately, I'm not sort of living that to each month kind of thing. And that's kind of why I was tryuing to say be driven by something you enjoy and if you can make the something you enjoy be your primary source of what's coming in, then you've nailed it. And sometimes when you think you've hit that it might change over time and then you change it up again and you chase again. But if you can do other things on the site, then that's even better. But don't stress over it and don't make that something you have to do like I see a lot of things where people say things like, oh, like you have to diversify your income stream. Yeah, I get that. And it's great, but I don't like make it a requirement for people like it doesn't have to be like it's everyone else seems to do right, so don't worry too much if you can find a job in tech like tech pays pretty well, so don't worry.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+I had a question from Ollie pixel, 
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+one of the audience?
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Yeah,
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+I recognise that name
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Ollie says, when learning something new, I tend to completely forgot the things that I've learned just before seeing how you easily jump from hardcore react to CSS and SVG to animations, then to node with electron. Makes me wonder how do you remember all the nuances of how to use them. Any tips,
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+is a hard one. This is a hard one, because, and I don't want to sound like I'm just lucky, like I'm just talented at doing it, but I have a very. I think it must just be practice practice practice because I have as I've been talking about this in this. I've been having some talks with some people to different opportunities and one of the strengths and you know like the classic, what are your strengths, what are your weaknesses thing. And I think one of my strengths is being able to context switch quite easily between things, and being able to remember those things, and it must just be a practice thing, and you just remember it, and you just keep going and yeah just remembering those things and the more you practice, the more comfortable you get and the more second nature is. I had a weird thing. Yeah, it's really like, I don't know, it's kind of like one of those. Not myth... I can't think of what is... a feeling? I don't know, I can't work it out. So I hit my head pretty bad when I was younger. 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Okay, 
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+this is gonna be an interesting story, I span down some stairs on my bike, quite a few years ago now. And what happened was I span. And when I landed. My foot slipped off the back pedal. And I ended up doing flip and the bike, I didn't let go the bike which is the, you should like you should eject it. I didn't let go, then it swung around, and a peg a stump peg in the back of the head. I still have like a scar that goes across the back of my head and I had it was stappled put up. And since then, and this is where it sounds stupid like it's just something I don't know, I can't think of the word for it like a suspicion or something. I've always had a really good memory for numbers and things. Since around that point, I don't know, maybe something got knocked in something just tweaked, I don't know it's weird but I have this weird memory for like, I see a number once and I can just remember, it's kind of similar I guess maybe that skill is transferable to looking at API's and stuff. I just use it and then I'm like, Yeah, I remember that and I just do it on top of my head, but I think it's like more a practice thing, finding ways to answer or explore the solution you need. That's one thing I think those are the skills that really make your development stronger is being able to find the answers find the solutions, not so much knowing them off the top of your head so that first role I had. Interesting enough they actually wrote an article about me. I joined because of an answer I gave in an interview, which was that I said, when they asked me a particular question about something, I said, Do you know I don't know, but I just google this, and they were quite taken aback by it because they expected an actual technical answer of like, Oh, you just take this API and multiply it by this and plus that I don't know what the API would have been. But I said I'd Google these keywords and I'd find the solution, and I'd apply it. And they were like, whoa, whoa. Okay, I guess that's right, as well, and they took that and and that's kind of always been the way I do so like I would, if I'm learning a package I'll be like, right, I'm gonna pull the package in, and then I'll just jump in the console and I'll see what API methods are available to me like with the. We call that like the autocomplete when you're in the console you press.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+oh Yes, 
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+options. 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Yeah.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+I'll do something like that. and then I'll explore and I'll be like that work right What does that give me, what can I do with this. And then I just sort of go from there. But yeah, practice, practice, practice, and then you just remember stuff. And, yeah, I don't know, I could just go,
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+I think, I think sometimes is also how you learn, and sometimes we haven't figured out how we learn properly, you know, when you go to school. They say, okay, you need to take notes for you to be able to learn and yeah sure notes work but maybe you can learn different so it's learning how to learn and learning what works for you, that helps you and then like you said, it's all the experience of the react to doing animations, and then you just have that experience because...
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+I think aswell with like with the React side of stuff and things that people, maybe associate myself with like lots of kind of whimsical kind of CSS or SVG very visual things, my actual like nine to five job would be that I was a senior react engineer, like I work with like react and I do stuff with node and stuff but then I'm able to just flick context to visual stuff because that's the stuff that I love to make. But then something you just said there which is, how do you remember the things, or like how do you make that learning so your remember something, I guess, if I thought about it and just another way of thinking about it was that I can associate certain things that I've learned to certain demos I've made. if that makes sense. So, If I think of greensock for example, something other than with green sock. So I think if green sock demos one of my favourite ones is the I made one where it's like a DJ deck and you use the scroll wheel to scratch the music that's actually playing. But that was an instance of showing the green sock you can tween an actual value on an object. So in that case, I'm tweening the audio. Current Time to make it as if you're scratching the actual record and crossfading audio. So what you do is you tween volume up on one twin volume down on another, and you learn how to do that. I know that's kind of why the demos kind of drive, trying different things and then you kind of remember those techniques because you've done them. I was messing around earlier with those really neat animation of some cubes that do, like, they're all like staggered Ryan Mulligan, I can't remember his Twitter handle, I think it's like a hexagon circle, potentially, but it's like a really fluid nice animation of the stagger cubes. So I thought I have a go at that I've been doing those cubes. So, I'll have a go, making my own, and then it was like well no now I need to switch. 3d playing around so I can get the rotations I want, and now remember that because it's like, oh, if I want to do it that way. I need to flip. So, and then I need to wrap things so I can do spins, and you just kind of learn things for the demo, and you kind of apply them So, yes, interesting so like when I wanted to learn react with green sock. That was when I made the impossible checkbox where the bear turns it off, because I was like, What can I do to link these two. And that was the thing I used so I was like, Oh, I want to see how to do react to a green sock to this, but other ones I'll be like, I want to do some Vue. So, how does Vue handle animation right let's find out and I'll just dig in and I'll be like, I'm going to make a phone Contacts app. That's probably one of my more less interesting, but it's pretty cool for the motion design so it's, it was more driven by, I want to create. So there was quite a few articles going around about motion design where it's like things where the UI kind of is more fluid and changes so like you'd click a contact and the contact avatar would move up, and the contact details would spread out. So I wanted to get better at creating like actual motion design demos, and then I was like, I use Vue and  greensock. So, yeah, I don't know, going off on a tangent again. Sorry, I can just talk for hours...
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+That's all right. Yeah, I'm the same so it's fine. I think, in my case, I learned best by practising as well, so I just, if I want to learn something specific I just tried to create something. The only thing is, I tend to not finish the thing, if that makes sense because okay I have to learn something
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+that happens and that's fine, like unfinished things are fine but you still pick stuff up from them. I think...
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+ yeah 
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+so like what drew you to doing the opsdroid stuff.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+well, so opsdroid. I didn't create opsdroid. This is like bringing me back with development, a friend of mine, took a CS degree University, and she was telling me about the classes and coding and everything I was like, oh, that seemed really cool. I was on my year, my second year university. I would like to do something like that so I was something in my head is like okay I'm going to try to find something. And I got a introduction to Java book online. I'll look at it with as far as Hello worlds and creates like a something with times. And then I was like okay, this is really complicated, jumping, a little bit forward, then I tried to do the MITx course on edx.org. The first time I failed completely. I actually did three times and first and second time I failed but that first time we had a really nice study group, and we were just get together try to solve a problem set, and try to do the things. And then I got a job as a flight attendants, I travel I enjoyed the life and whatever and then I said, you know, I need to do something with my brain, and I need to do something else other than just flying around. I went back to coding I was like I think I'm going to try to beat that course because I was really annoyed that I couldn't finish the course. So, I got to the course and I finished the course. And then I fell in love again for coding. And I said, Okay, this is the thing I want to do. And I was doing the whole tutorials and learning about stuff, I started with Python because the course was introduction to CS with python and then I started listening to podcasts, and one podcast, Jacob, the creator of opsdroid he said he was talking about the project and he said if someone wants to contribute. I'll be more than happy to have your contribution and I was like, this is really cool. I need to do that. So, I was on holidays at the time, when I came back, I sent him a message say, Hey, I heard your episode and the project seems so cool. I would like to contribute and he said yeah sure here's the, the repository. If you need any help, let me know and that's how I started, I started by just doing some silly updating a regex rule for the skills. So on opsdroid skills are just Python functions or Python classes. And that's how I got started. I really love it so much by having a chatbot do the thing that I wanted that. I just started contributing more and more and more and yeah it's been almost four years. There is so much. I want to do with it that I just keep on contributing and adding features. Yeah. My mistake I think, Jacob asked me to become a maintainer. A year ago or a year and a half ago, and I was like, wow, seriously, okay well I would love that! And also, yeah, it's been a good experience to be honest.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Pretty cool. Yeah, cuz obviously you're really the only person I see where that's mentioned because I had no idea about it until I saw you doing it, and I from watching your streams and even your journey in the recent time since you've started doing these streams, incredible really like the, well I've asked you before like how are you doing these things, how do you do your overlays or how do you do this or because it's really interesting to see because I think you probably started around the lockdown kind of time as well. Right, so we kind of started around the same time but... our journey is quite different, but it's really interesting to see, like you've done a really fantastic job so well done
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+althought  saying that, and I appreciate for the compliment, but although saying that I need to ask you about all your animations how you made them because I really want to do the same thing, and saying that all the time that I need to bother you tell me how to do it, and I need to
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+we need to do another session where we do that, we could just make them online, we could make them on a stream that'd be really cool because...
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+that's a good idea!
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+that's where it's funny because like your, your stream looks like fantastic because you have your overlays and you've got your awesome camera setup you have like your nice effect with your blur background, all this kind of stuff is like
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Thank you.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+It's so neat and good looking and what was I driven by when I did my stream? I want to make corgis in front the stream... the overlay is terrible, but I just want to have like a shipping container fly across the screen I want to rock it. 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Your animations are amazing tho
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+our missions are completly different so
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+your animations are amazing and, you know, sometimes people just keep on going with that command after command because they're just so much so much fun. So, yeah,
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+I have so many more to make like I need to do some more but we can, we need to do that because we can do... there's plenty we could do for your streams, because you have the plane so you have like a theme, which is great so you can do so many things with it. We could just create some svgs and we can put you know if you did the Corgi in the SVG which is one you could easily make one for that, but that wouldn't take long at all
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+ That's true. I'm on three weeks off now. So, I'm sure we can, yeah, we need to schedulle that
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+we should, that'd be fun, because, um, so I have like a call coming up where I have to show people how to how to prove I have to present something to 10 minutes, just anything. And I was even thinking about doing like how do you do that is a. It's really interesting how people do, how people approach the whole overlays and things on twitch, as there's no like real set way so like I think the good example is. So I started off and I just drag some things around because I had no idea what I was doing, and then people. I watched Ryan Warner on learn with Jason and thought I could just use figma. So that's what I use to create mine at the moment, but I haven't had time to go back, but then seeing Kurt do all of his with react is really
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+actually going to speak with him tomorrow.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Yeah, so like his his, his is really good now I'm thinking, do you know what I'm just gonna build mine as an app and drop it in as a browser source. So yeah...
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+it's just a good idea
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+it's really interesting. See how you approach approach it like yes cool, I think the best way it'd be being able to have the browser source pulling the title and everything like that, like that's what I really want to do for the next one. Like I say, my motivations getting animations, drop in my webcam somewhere and as long as I hit go and it works and if there are complaints then I change it. Don't worry about the production value will increase in time.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Now that you say that I've been thinking to do the same thing because I do it manually, and I think I just have to make, especially the podcast one I just need to automate everything, so I need to work on that. Let me ask you one question, if you were looking at the 16 year old Jay, what is one piece of advice you would give him.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+I...
+
+I am very, like, I don't know, I, I'm one of those believers in like everything happens. This is meant to not one of those like if I go back I change this. So, that's a tough one because I, I wouldn't want to change anything I'd want it to work out how it worked out because I feel like if it all worked out to perfect, then you never really have that space to grow into because you you don't learn from the mistakes right. What did I do 16, what was I doing at 16. I mean, probably on the front here, so like interest in fact, the house I bought my parents actually live across the road. So, my family like we have people that have are able to help renovate so I bought the house opposite so we can renovate it, and there's no, there's no travelling involved so it's quite good. But I was probably outside there on the street, spinning around on my bike that would have been wandering around 16. So, I don't know, I don't know what I'd say, because at the time, you know you said you picked up a book and you looked at it and it was complicated. I did the same thing. Around that time, I think, maybe a couple of years later, school used to get. So over here I don't know if they had a similar thing in Portugal yet like the record of achievement, which is something you get a school, and they give it out and it has like you know you put all your certificates in it and it has like your attendances and things like that and. And I think one year like the end school awards or something like that I won some book vouchers. And because I was doing well in IT, and the teachers like, Oh, you should get into coding, and there was a guy at school actually I remember he used to do like all these used to loads of like Windows programming stuff and he would make these cool projects or whatever. And I was like, meh, I'd give it a go but I wasn't really interested. But I bought a Visual Basic book with the book voucher that I got from school. And I think I opened the cover once, and never actually read it. It's probably still in my parents house somewhere. Yeah,
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Fair enough
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+for advice I don't know, I kind of, I kind of do believe in it but then at the same time I don't, because I think I'm kind of happy with how things turned out I wouldn't really change it. What about you, how do you answer that one as an interesting one
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+well about me I think the one piece of advice that I would give me or two piece of advice that I would give me is maths are not as hard as you think they are. You just had really bad teachers, you just need to find someone to teach you this properly. And the second one would be. Do this computer thing that you always wanted to do, even because when I was younger I wanted to work. I was a massive gamer as well. And I wanted to work in the gaming industry, so I said I know I need to learn how to code right. And I met someone. My dad used to be a photographer for weddings and christenings and all this stuff. And this person said, hey if you want to do this, completed thing. He had his own company building computers and help desk thing. Here's a CD with a Linux distro, which I think it was Ubuntu if I'm not mistaken, instal it, get your head around the edge because you'll be able to do more things than Windows, and this is a great way for you to start learning how to code. And I tried to instal the distro, and I couldn't get the drivers to work, because I needed the drivers to have the internet working. So I kind of left it off. So I think the thing I would say is, just keep on going. It's going to suck, not knowing how to do things but you will get better.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+I think, yeah, like, embrace that part as well, like that's the good part like that is, you hit the Eureka moment like that is worth the battle that you had before, of trying to get there. 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Yeah. 
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Yeah, 100, like that is the, I think that's like the trait of developers though like you really enjoy what you do. And you enjoy the process of learning. So it's like problem solving and learning is the thing you like. so you just keep going. Yeah, it's interesting. It's really, I'm gonna have to think about that question, I think I will be thinking about it. I like these kind of ones because they. Yeah, it's interesting, very interesting. I just, I try and think like because I'd be like, Oh, don't, don't follow the money follow what you enjoy but then if I didn't, you know, I'd never found out how I did it wouldn't have drove me the way I did so it might have ended up somewhere completely different. Yeah, yeah, yeah. 
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Makes sense
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+ yeah they're good questions.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Thanks. So if folks who wants to get in contact with you see the amazing things that you do, what is the best place to do so.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+I see you have my Twitter handle there, that's always a good start. Kind of pointing to there... email. email's good. I think that's listed, that's on my site at the bottom. I do a newsletter, but I don't know, it's kind of like a ramble, so it's more like, I use it more like a diary. It's not a typical newsletter it's kind of like, here's what I got up to this month, and it's nice to look back and remember, so I forget how half the things. But yeah, or I don't buy it Twitter, I actually like it when people reach out and say hello. Say, I try and help, just don't write just Hello, because that's like, that's a big no no.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+I can't really go from there. Hi, I don't know.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Because that's like how we start like we started talking just by... I ca n't remember how...
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+I believe it was on party Corgi.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Yeah, yeah, definitely on this code, we started talking about capture cards. That's what we started talking about,
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Yeah that's true
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+we spoken before we'd spoken before on the discord but then the way we actually started having like one to ones was about streaming tech, which is like really, it's really cool, because now we're on a stream together.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+And then the stream out edited those found that then I'll make it in a episode for posterity I guess.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+So yeah it'll be discord the discord is a whole nother conversation, but yeah it's really, it's a cool community, obviously like you picked up the capture card that I wrote about in that article is still going strong for me.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+So, and when I was speaking with Dr. Michaela . She said that she wanted to use her camera, and I said, Look, Jhey suggest me a capture card and I tried it, it's amazing. So, this costed like 15, pounds, and I bought mine on Amazon, but yeah you bought yours on eBay and it works amazingly well. 
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+cheaper in ebay
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+So, but then comparing to Elgato one obviously the quality's might be a bit better, but the price is way, way higher.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+So with streaming. I think because I wrote that article about starting streaming and then I started because I was like, people had suggested that they would like to see my process. So I was like, Okay, I'll give it a go. I just jumped in, but I think some people sometimes off, put by the idea of how to set up and everything. And I think the best advice is just hit the play button and just go for it and see what happens. And then worry about the other part of it afterwards so you see a lot of people like they're really worried about their lighting, what camera they have the sound. Oh I need professional oh no no you don't. People will come because of the content and because like the people the other stuff's a bonus, but yeah, like people are more interested in. And I, that's something I've learned like people are interested in more in like process, the people that they see and, you know, as long as they can hear you, and see what you're up to. I mean, that's the most important part
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+And then if you start becoming successful just invest on a better microphone, which it should be probably the first step that you do, and then gets in lights to get better camera but it's a process, like you said, the streamer is probably one of the most important things. And then whatever you're working is the second most important
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Because as well like you have to find what works for you and your stream like I'm still trying to work out, like I'm, I found that doing the little two hour chunks works better for me, whereas previously I was doing like four to six hours to trying and make something and coming away like, I can't do that again for like another week, but now I can do it like every day so like you might find that you do it, the idea of it sounds great, but when you actually do it you hate it. And you've invested in all that equipment. And so,
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+if you're not having fun as well then you won't have a good energy on the stream. So that's. That would seem weird as well. So, yeah,
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+if you do the overlay animations though I have a heavily recommend a stream deck so you can have buttons to fire things that's like...
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+I got the cheaper version I'm using touch portal.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Yeah. Hows that work? Is it good?
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+yeah that was, that works good. You just have to have your phone or whatever on the same Wi Fi in same network as OBS. So, yeah, it works pretty good.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+I didn't know about that and then I just like happened to see a stream deck on sale so is like, right, I'm going to pick one up but it's really handy because I have like. So on my stream I have like you can fire air horn, and it's good to be able to like spam it something just like hit the button.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Yeah. And it's quite funny so yeah. J you have another call coming so I appreciate your time. I've really enjoyed it. We have to get together and work on the animation.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Yeah, let's do it let's do it let's let's get flown by, and I say unfortunately I have enough call it's not. Unfortunately I have the call is unfortunate timing because obviously, this is great I keep talking to be honest. So,
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+we will get something later on for another day, and then we do another episode, there'll be good. 
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+Yeah, let's do it. Yes, definitely. thatis great.
+
+<p class="transcript-fabio">Fabio Rosado</p>  
+Have a good day. Thank you for talking.
+
+<p class="transcript-guest">Jhey Tompkins</p>    
+You too! Thanks for having me on see you Fabio.
