@@ -108,13 +108,13 @@ h3 {
 .green-button {
     background-color: $bg-green;
     border: 1px solid $green;
-    color: $green;
+    color: $green !important; 
     transition: all .5s ease-in-out;
-    text-decoration: none;
+    text-decoration: none !important;
 
     &:hover {
         background-color: $bg-red;
-        color: $red;
+        color: $red !important;
         border-color: $red;
         transition: all .5s ease-in-out;
     }

@@ -262,7 +262,7 @@ label {
   display: flex;
   flex-direction: column !important;
   justify-content: center;
-  transform: translate(200%);
+  transform: translate(500%);
   position: fixed;
   background-color: $dark-bg-color;
   top: 0rem;
@@ -290,7 +290,7 @@ label {
 }
 
 .navbar-hide {
-  transform: translate(200%);
+  transform: translate(500%);
   transition: all .5s ease 0s;
 }
 

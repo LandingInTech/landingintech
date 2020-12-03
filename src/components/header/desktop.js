@@ -34,9 +34,9 @@ const DesktopHeader = () => (
       >
         Store
       </a>
-      <a href="https://discord.gg/ZUk4eRh" className="nav-link m-4">
+      <Link to="/community" className="nav-link m-4">
         Community
-      </a>
+      </Link>
       <Link className="nav-link m-4" to="/newsletter">
         Newsletter
       </Link>
