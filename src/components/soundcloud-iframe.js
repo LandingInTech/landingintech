@@ -10,7 +10,7 @@ const SoundCloud = () => (
       frameBorder="no"
       allow="autoplay"
       title="latest episode"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/938588143&color=%23fc4056&inverse=true&auto_play=false&show_user=true"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/948787954&color=%23fc4056&inverse=true&auto_play=false&show_user=true"
     />
   </div>
 )
