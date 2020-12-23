@@ -61,7 +61,11 @@ const MobileHeader = () => {
         >
           Store
         </a>
-        <Link to="/community" href="https://discord.gg/ZUk4eRh" className="nav-link m-4">
+        <Link
+          to="/community"
+          href="https://discord.gg/ZUk4eRh"
+          className="nav-link m-4"
+        >
           Community
         </Link>
         <Link className="nav-link m-4" to="/newsletter">

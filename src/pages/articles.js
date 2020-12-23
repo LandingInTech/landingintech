@@ -21,7 +21,10 @@ export default props => {
 
 export const pageQuery = graphql`
   query {
-    articles: allMdx(filter: { fields: { slug: { regex: "/articles/" } } }) {
+    articles: allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { slug: { regex: "/articles/" } } }
+    ) {
       nodes {
         frontmatter {
           date(formatString: "dddd Mo, MMM YYYY")

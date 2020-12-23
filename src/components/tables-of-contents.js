@@ -30,8 +30,7 @@ function useActiveId(itemIds) {
     })
     return () => {
       itemIds.forEach(id => {
-        if (typeof (observer) === "Element") {
-
+        if (typeof observer === "Element") {
           observer.unobserve(document.getElementById(id))
         }
       })

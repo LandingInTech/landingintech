@@ -95,10 +95,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: 'https://landingintech.com',
-        sitemap: 'https://landingintech.com/sitemap-pages.xml',
-        policy: [{ userAgent: '*', allow: '/'}]
-      }
+        host: "https://landingintech.com",
+        sitemap: "https://landingintech.com/sitemap-pages.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     `gatsby-plugin-mdx-embed`,
     {
@@ -116,18 +116,19 @@ module.exports = {
           }
         }
       `,
-      feeds: [{
-        serialize: ({ query: {site, allMdx}}) => {
-          return allMdx.edges.map(edge => {
-            return Object.assign({}, edge.node.frontmatter, {
-              description: edge.node.excerpt,
-              date: edge.node.frontmatter.date,
-              url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-              guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-            })
-          })
-        },
-        query: `
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                })
+              })
+            },
+            query: `
           {
             allMdx(sort: {order: DESC, fields: [frontmatter___date]}) {
               edges {
@@ -145,10 +146,11 @@ module.exports = {
             }
           }
         `,
-        output: "/rss.xml",
-        title: "Landing in Tech RSS Feed"
-      }]
-      }
+            output: "/rss.xml",
+            title: "Landing in Tech RSS Feed",
+          },
+        ],
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
