@@ -101,6 +101,55 @@ module.exports = {
       }
     },
     `gatsby-plugin-mdx-embed`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              title
+              siteUrl
+              description
+              author
+            }
+          }
+        }
+      `,
+      feeds: [{
+        serialize: ({ query: {site, allMdx}}) => {
+          return allMdx.edges.map(edge => {
+            return Object.assign({}, edge.node.frontmatter, {
+              description: edge.node.excerpt,
+              date: edge.node.frontmatter.date,
+              url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+              guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+            })
+          })
+        },
+        query: `
+          {
+            allMdx(sort: {order: DESC, fields: [frontmatter___date]}) {
+              edges {
+                node {
+                  excerpt
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    date
+                    title
+                  }
+                }
+              }
+            }
+          }
+        `,
+        output: "/rss.xml",
+        title: "Landing in Tech RSS Feed"
+      }]
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
