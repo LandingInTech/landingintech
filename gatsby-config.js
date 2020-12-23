@@ -92,6 +92,14 @@ module.exports = {
         addUncaughtPages: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: 'https://landingintech.com',
+        sitemap: 'https://landingintech.com/sitemap-pages.xml',
+        policy: [{ userAgent: '*', allow: '/'}]
+      }
+    },
     `gatsby-plugin-mdx-embed`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
