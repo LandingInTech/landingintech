@@ -47,7 +47,7 @@ const IndexPage = props => {
               width="24"
               height="24"
             />
-            G Podcasts
+            G PODCASTS
           </a>
           <a
             href="https://podcasts.apple.com/gb/podcast/landing-in-tech/id1524211616"
